@@ -1,0 +1,15 @@
+experiment_type: traditional
+experiment_name: traditional-demo
+description: >
+  The complete 'traditional' classification experiment based on the final, 
+  ambitus and initial, in all possible combinations. This is a demo experiment
+  using only the demo data. Should run in a few minutes.
+feature_sets: 'all'
+genres: 'all'
+subsets: 'all'
+n_iter: 2
+n_splits: 2
+
+random_state: 0
+data_dir: data/run-0
+results_dir: demo-results/run-0

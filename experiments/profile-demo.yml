@@ -1,0 +1,16 @@
+experiment_type: profile
+experiment_name: profile-demo
+description: >
+  The complete classification experiment based on pitch, pitch-class 
+  and repetition profiles, using a k-NN classifier. This is a demo experiment
+  using the full dataset, but without tuning. Should run in a few minutes.
+profiles: 'all'
+genres: 'all'
+subsets: 'all'
+n_iter: 1
+n_splits: 2
+
+random_state: 0
+data_dir: data/run-0
+results_dir: demo-results/run-0
+# Don't use demo data, but full data.
