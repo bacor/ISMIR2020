@@ -1,0 +1,28 @@
+.vscode
+env
+__pycache__/
+.ipynb_checkpoints/
+
+# Excluded full Cantus data: too large
+cantuscorpus/
+
+experiments
+results
+tests
+notebooks
+
+*/run-1/
+*/run-2/
+*/run-3/
+*/run-4/
+
+# Others
+tmp/
+excluded/
+experiments-old/
+demo-results/
+excluded_notebooks/
+*.zip
+notes/
+
+*.model
