@@ -1,0 +1,89 @@
+INFO 31-07-20 22:48:27 **************************************************
+INFO 31-07-20 22:48:27 * CREATING DATASET
+INFO 31-07-20 22:48:27 * genre: genre_r
+INFO 31-07-20 22:48:27 * train_frac: 0.7
+INFO 31-07-20 22:48:27 * remove_duplicate_cantus_ids: True
+INFO 31-07-20 22:48:27 * output_dir: demo-data/run-0/responsory/subset
+INFO 31-07-20 22:48:27 **************************************************
+INFO 31-07-20 22:48:27 Setting numpy random seed random_state=1
+INFO 31-07-20 22:48:27 Filtering chants...
+INFO 31-07-20 22:48:27  . Filter Chants Without Volpiano:
+INFO 31-07-20 22:48:27  . Exclude all chants with an empty volpiano field
+INFO 31-07-20 22:48:27  .  > 0.00% removed (0 out of 2000; 2000 remain)
+INFO 31-07-20 22:48:27  . Filter Chants Without Notes:
+INFO 31-07-20 22:48:27  . Exclude all chants without notes
+INFO 31-07-20 22:48:27  .  > 3.40% removed (68 out of 2000; 1932 remain)
+INFO 31-07-20 22:48:27  . Filter Chants Without Simple Mode:
+INFO 31-07-20 22:48:27  . Include only chants with simple modes: 1-8, not transposed
+INFO 31-07-20 22:48:27  .  * include_transposed=False
+INFO 31-07-20 22:48:27  .  > 22.31% removed (431 out of 1932; 1501 remain)
+INFO 31-07-20 22:48:27  . Filter Chants Without Full Text:
+INFO 31-07-20 22:48:27  . Filter chants without full text
+INFO 31-07-20 22:48:27  .  > 20.39% removed (306 out of 1501; 1195 remain)
+INFO 31-07-20 22:48:27  . Filter Chants Where Incipit Is Full Text:
+INFO 31-07-20 22:48:27  . Filter chants whose incipit is identical to the full text
+INFO 31-07-20 22:48:27  .  > 13.14% removed (157 out of 1195; 1038 remain)
+INFO 31-07-20 22:48:27  . Filter Chants By Genre:
+INFO 31-07-20 22:48:27  . Include only chants with a certain genre
+INFO 31-07-20 22:48:27  .  * include=['genre_r']
+INFO 31-07-20 22:48:27  .  > 78.23% removed (812 out of 1038; 226 remain)
+INFO 31-07-20 22:48:27  . Filter Chants Not Starting With G Clef:
+INFO 31-07-20 22:48:27  . Exclude chants that do not start with a G clef
+INFO 31-07-20 22:48:27  .  > 0.00% removed (0 out of 226; 226 remain)
+INFO 31-07-20 22:48:27  . Filter Chants With F Clef:
+INFO 31-07-20 22:48:27  . Exclude chants that contain an F clef
+INFO 31-07-20 22:48:27  .  > 0.00% removed (0 out of 226; 226 remain)
+INFO 31-07-20 22:48:27  . Filter Chants With Missing Pitches:
+INFO 31-07-20 22:48:27  . Filter chants with missing pitches: containing the substring 6------6
+INFO 31-07-20 22:48:27  .  > 2.65% removed (6 out of 226; 220 remain)
+INFO 31-07-20 22:48:27  . Filter Chants With Nonvolpiano Chars:
+INFO 31-07-20 22:48:27  . Exclude all chants with non-volpiano characters
+INFO 31-07-20 22:48:27  .  > 0.00% removed (0 out of 220; 220 remain)
+INFO 31-07-20 22:48:27  . Filter Chants Without Word Boundary:
+INFO 31-07-20 22:48:27  . Only include chants with '---' in their volpiano
+INFO 31-07-20 22:48:27  .  > 0.00% removed (0 out of 220; 220 remain)
+INFO 31-07-20 22:48:27  . Filter Chants With Duplicated Notes:
+INFO 31-07-20 22:48:27  . Filter duplicate chants: whose notes occur multiple times
+INFO 31-07-20 22:48:27  .  > 0.00% removed (0 out of 220; 220 remain)
+INFO 31-07-20 22:48:28  . Sample One Chant Per Mode And Cantus Id:
+INFO 31-07-20 22:48:28  . For every cantus_id, sample one chant of each mode.
+INFO 31-07-20 22:48:28  .  * random_state=37
+INFO 31-07-20 22:48:28  .  > 5.91% removed (13 out of 220; 207 remain)
+INFO 31-07-20 22:48:28 Generate train and test split... (random_state={rs})
+INFO 31-07-20 22:48:28 Split in training (N=145) and test (N=62)
+INFO 31-07-20 22:48:28  > Stored to demo-data/run-0/responsory/subset/test-chants.csv
+INFO 31-07-20 22:48:28    md5 checksum: e83be9dbc613375a1906c4fd3ef9c3d5
+INFO 31-07-20 22:48:28  > Stored to demo-data/run-0/responsory/subset/train-chants.csv
+INFO 31-07-20 22:48:28    md5 checksum: fe97be5ca5bb4dd19e8f42c5606d41a0
+INFO 31-07-20 22:48:28 Generate segmentations...
+INFO 31-07-20 22:48:28  > Stored to demo-data/run-0/responsory/subset/train-representation-pitch.csv
+INFO 31-07-20 22:48:28    md5 checksum: a5d50f7599a6f4b06c459f1e551bb514
+INFO 31-07-20 22:48:29  > Stored to demo-data/run-0/responsory/subset/test-representation-pitch.csv
+INFO 31-07-20 22:48:29    md5 checksum: 668cff130612f5aecd113fe8abdff53f
+INFO 31-07-20 22:48:29 Generate other representations...
+INFO 31-07-20 22:48:29  dependent interval representation
+INFO 31-07-20 22:48:29  > Stored to demo-data/run-0/responsory/subset/train-representation-interval-dependent.csv
+INFO 31-07-20 22:48:29    md5 checksum: 2d2b6f0584ad74c540d5c7dd8b364036
+INFO 31-07-20 22:48:29  > Stored to demo-data/run-0/responsory/subset/test-representation-interval-dependent.csv
+INFO 31-07-20 22:48:29    md5 checksum: 0289b2b8730a3abc3c1d7271ddc356a4
+INFO 31-07-20 22:48:29  independent interval representation
+INFO 31-07-20 22:48:30  > Stored to demo-data/run-0/responsory/subset/train-representation-interval-independent.csv
+INFO 31-07-20 22:48:30    md5 checksum: 608294c3a6723e242eec10639a75e8bd
+INFO 31-07-20 22:48:31  > Stored to demo-data/run-0/responsory/subset/test-representation-interval-independent.csv
+INFO 31-07-20 22:48:31    md5 checksum: f606f97cb22e109dab83af3a1aaa8ca0
+INFO 31-07-20 22:48:31  dependent contour representation
+INFO 31-07-20 22:48:31  > Stored to demo-data/run-0/responsory/subset/train-representation-contour-dependent.csv
+INFO 31-07-20 22:48:31    md5 checksum: 85f602353d01d3405c396a7d656c4895
+INFO 31-07-20 22:48:31  > Stored to demo-data/run-0/responsory/subset/test-representation-contour-dependent.csv
+INFO 31-07-20 22:48:31    md5 checksum: a42e496477a9bcc3f4ae8d8c99b3426e
+INFO 31-07-20 22:48:31  independent contour representation
+INFO 31-07-20 22:48:32  > Stored to demo-data/run-0/responsory/subset/train-representation-contour-independent.csv
+INFO 31-07-20 22:48:32    md5 checksum: ca256f1dce0240c80577b470526489c9
+INFO 31-07-20 22:48:32  > Stored to demo-data/run-0/responsory/subset/test-representation-contour-independent.csv
+INFO 31-07-20 22:48:32    md5 checksum: 311abfea9cf7359c2390c8a00ffc685c
+INFO 31-07-20 22:48:32 Extract features...
+INFO 31-07-20 22:48:33  > Stored to demo-data/run-0/responsory/subset/train-features.csv
+INFO 31-07-20 22:48:33    md5 checksum: e06daf43829965506d2cef06bdea2ccd
+INFO 31-07-20 22:48:33  > Stored to demo-data/run-0/responsory/subset/test-features.csv
+INFO 31-07-20 22:48:33    md5 checksum: db89a0c7c74b33803d710394767a5b1b
+INFO 31-07-20 22:48:33 ——————————————————————————————————————————————————

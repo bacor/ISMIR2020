@@ -1,0 +1,89 @@
+INFO 31-07-20 22:48:33 **************************************************
+INFO 31-07-20 22:48:33 * CREATING DATASET
+INFO 31-07-20 22:48:33 * genre: genre_a
+INFO 31-07-20 22:48:33 * train_frac: 0.7
+INFO 31-07-20 22:48:33 * remove_duplicate_cantus_ids: True
+INFO 31-07-20 22:48:33 * output_dir: demo-data/run-0/antiphon/subset
+INFO 31-07-20 22:48:33 **************************************************
+INFO 31-07-20 22:48:33 Setting numpy random seed random_state=2
+INFO 31-07-20 22:48:33 Filtering chants...
+INFO 31-07-20 22:48:33  . Filter Chants Without Volpiano:
+INFO 31-07-20 22:48:33  . Exclude all chants with an empty volpiano field
+INFO 31-07-20 22:48:33  .  > 0.00% removed (0 out of 2000; 2000 remain)
+INFO 31-07-20 22:48:33  . Filter Chants Without Notes:
+INFO 31-07-20 22:48:33  . Exclude all chants without notes
+INFO 31-07-20 22:48:33  .  > 3.40% removed (68 out of 2000; 1932 remain)
+INFO 31-07-20 22:48:33  . Filter Chants Without Simple Mode:
+INFO 31-07-20 22:48:33  . Include only chants with simple modes: 1-8, not transposed
+INFO 31-07-20 22:48:33  .  * include_transposed=False
+INFO 31-07-20 22:48:33  .  > 22.31% removed (431 out of 1932; 1501 remain)
+INFO 31-07-20 22:48:33  . Filter Chants Without Full Text:
+INFO 31-07-20 22:48:33  . Filter chants without full text
+INFO 31-07-20 22:48:33  .  > 20.39% removed (306 out of 1501; 1195 remain)
+INFO 31-07-20 22:48:33  . Filter Chants Where Incipit Is Full Text:
+INFO 31-07-20 22:48:33  . Filter chants whose incipit is identical to the full text
+INFO 31-07-20 22:48:33  .  > 13.14% removed (157 out of 1195; 1038 remain)
+INFO 31-07-20 22:48:33  . Filter Chants By Genre:
+INFO 31-07-20 22:48:33  . Include only chants with a certain genre
+INFO 31-07-20 22:48:33  .  * include=['genre_a']
+INFO 31-07-20 22:48:33  .  > 53.18% removed (552 out of 1038; 486 remain)
+INFO 31-07-20 22:48:33  . Filter Chants Not Starting With G Clef:
+INFO 31-07-20 22:48:33  . Exclude chants that do not start with a G clef
+INFO 31-07-20 22:48:33  .  > 0.00% removed (0 out of 486; 486 remain)
+INFO 31-07-20 22:48:33  . Filter Chants With F Clef:
+INFO 31-07-20 22:48:33  . Exclude chants that contain an F clef
+INFO 31-07-20 22:48:33  .  > 0.00% removed (0 out of 486; 486 remain)
+INFO 31-07-20 22:48:33  . Filter Chants With Missing Pitches:
+INFO 31-07-20 22:48:33  . Filter chants with missing pitches: containing the substring 6------6
+INFO 31-07-20 22:48:33  .  > 9.67% removed (47 out of 486; 439 remain)
+INFO 31-07-20 22:48:33  . Filter Chants With Nonvolpiano Chars:
+INFO 31-07-20 22:48:33  . Exclude all chants with non-volpiano characters
+INFO 31-07-20 22:48:33  .  > 0.00% removed (0 out of 439; 439 remain)
+INFO 31-07-20 22:48:33  . Filter Chants Without Word Boundary:
+INFO 31-07-20 22:48:33  . Only include chants with '---' in their volpiano
+INFO 31-07-20 22:48:33  .  > 0.00% removed (0 out of 439; 439 remain)
+INFO 31-07-20 22:48:33  . Filter Chants With Duplicated Notes:
+INFO 31-07-20 22:48:33  . Filter duplicate chants: whose notes occur multiple times
+INFO 31-07-20 22:48:33  .  > 0.00% removed (0 out of 439; 439 remain)
+INFO 31-07-20 22:48:36  . Sample One Chant Per Mode And Cantus Id:
+INFO 31-07-20 22:48:36  . For every cantus_id, sample one chant of each mode.
+INFO 31-07-20 22:48:36  .  * random_state=40
+INFO 31-07-20 22:48:36  .  > 6.61% removed (29 out of 439; 410 remain)
+INFO 31-07-20 22:48:36 Generate train and test split... (random_state={rs})
+INFO 31-07-20 22:48:36 Split in training (N=287) and test (N=123)
+INFO 31-07-20 22:48:36  > Stored to demo-data/run-0/antiphon/subset/test-chants.csv
+INFO 31-07-20 22:48:36    md5 checksum: ea79c5b6e7f2102117a45dbe520d0b02
+INFO 31-07-20 22:48:36  > Stored to demo-data/run-0/antiphon/subset/train-chants.csv
+INFO 31-07-20 22:48:36    md5 checksum: 9a32e218ac7775cd694f9347b2b112c0
+INFO 31-07-20 22:48:36 Generate segmentations...
+INFO 31-07-20 22:48:36  > Stored to demo-data/run-0/antiphon/subset/train-representation-pitch.csv
+INFO 31-07-20 22:48:36    md5 checksum: 7a0c776bf4897f3bff974dbe7527de91
+INFO 31-07-20 22:48:36  > Stored to demo-data/run-0/antiphon/subset/test-representation-pitch.csv
+INFO 31-07-20 22:48:36    md5 checksum: b9c78c2eed1769d53cff9cdf4f25845f
+INFO 31-07-20 22:48:36 Generate other representations...
+INFO 31-07-20 22:48:36  dependent interval representation
+INFO 31-07-20 22:48:36  > Stored to demo-data/run-0/antiphon/subset/train-representation-interval-dependent.csv
+INFO 31-07-20 22:48:36    md5 checksum: 345463b8fd98c29b931634e49af06f48
+INFO 31-07-20 22:48:36  > Stored to demo-data/run-0/antiphon/subset/test-representation-interval-dependent.csv
+INFO 31-07-20 22:48:36    md5 checksum: 254b940b343a985d6e3d7d08f3d36724
+INFO 31-07-20 22:48:36  independent interval representation
+INFO 31-07-20 22:48:37  > Stored to demo-data/run-0/antiphon/subset/train-representation-interval-independent.csv
+INFO 31-07-20 22:48:37    md5 checksum: 1fb58713e8b63c090ab094346070c303
+INFO 31-07-20 22:48:38  > Stored to demo-data/run-0/antiphon/subset/test-representation-interval-independent.csv
+INFO 31-07-20 22:48:38    md5 checksum: 77a564f07aa40faf834d2cc4917c9f83
+INFO 31-07-20 22:48:38  dependent contour representation
+INFO 31-07-20 22:48:38  > Stored to demo-data/run-0/antiphon/subset/train-representation-contour-dependent.csv
+INFO 31-07-20 22:48:38    md5 checksum: 0d8770b3415e72ecfba035a1aefb74af
+INFO 31-07-20 22:48:38  > Stored to demo-data/run-0/antiphon/subset/test-representation-contour-dependent.csv
+INFO 31-07-20 22:48:38    md5 checksum: ded083167ee8039ce282225c0f714b11
+INFO 31-07-20 22:48:38  independent contour representation
+INFO 31-07-20 22:48:39  > Stored to demo-data/run-0/antiphon/subset/train-representation-contour-independent.csv
+INFO 31-07-20 22:48:39    md5 checksum: 0d39fba87e1cb6c69578c4059ae90e76
+INFO 31-07-20 22:48:39  > Stored to demo-data/run-0/antiphon/subset/test-representation-contour-independent.csv
+INFO 31-07-20 22:48:39    md5 checksum: 65f981e139a704b5b24c5ad10ced8451
+INFO 31-07-20 22:48:39 Extract features...
+INFO 31-07-20 22:48:40  > Stored to demo-data/run-0/antiphon/subset/train-features.csv
+INFO 31-07-20 22:48:40    md5 checksum: f870b15b06a01aaa6cd262476ad70d95
+INFO 31-07-20 22:48:40  > Stored to demo-data/run-0/antiphon/subset/test-features.csv
+INFO 31-07-20 22:48:40    md5 checksum: fc8ed5f8a14a86bb2bad0fa4cdc69e8d
+INFO 31-07-20 22:48:40 ——————————————————————————————————————————————————
