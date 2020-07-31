@@ -1,0 +1,85 @@
+INFO 31-07-20 22:52:34 **************************************************
+INFO 31-07-20 22:52:34 * CREATING DATASET
+INFO 31-07-20 22:52:34 * genre: genre_a
+INFO 31-07-20 22:52:34 * train_frac: 0.7
+INFO 31-07-20 22:52:34 * remove_duplicate_cantus_ids: False
+INFO 31-07-20 22:52:34 * output_dir: data/run-0/antiphon/full
+INFO 31-07-20 22:52:34 **************************************************
+INFO 31-07-20 22:52:34 Setting numpy random seed random_state=3
+INFO 31-07-20 22:52:34 Filtering chants...
+INFO 31-07-20 22:52:34  . Filter Chants Without Volpiano:
+INFO 31-07-20 22:52:34  . Exclude all chants with an empty volpiano field
+INFO 31-07-20 22:52:34  .  > 87.20% removed (433443 out of 497071; 63628 remain)
+INFO 31-07-20 22:52:34  . Filter Chants Without Notes:
+INFO 31-07-20 22:52:34  . Exclude all chants without notes
+INFO 31-07-20 22:52:34  .  > 2.87% removed (1825 out of 63628; 61803 remain)
+INFO 31-07-20 22:52:35  . Filter Chants Without Simple Mode:
+INFO 31-07-20 22:52:35  . Include only chants with simple modes: 1-8, not transposed
+INFO 31-07-20 22:52:35  .  * include_transposed=False
+INFO 31-07-20 22:52:35  .  > 23.02% removed (14227 out of 61803; 47576 remain)
+INFO 31-07-20 22:52:35  . Filter Chants Without Full Text:
+INFO 31-07-20 22:52:35  . Filter chants without full text
+INFO 31-07-20 22:52:35  .  > 20.65% removed (9823 out of 47576; 37753 remain)
+INFO 31-07-20 22:52:35  . Filter Chants Where Incipit Is Full Text:
+INFO 31-07-20 22:52:35  . Filter chants whose incipit is identical to the full text
+INFO 31-07-20 22:52:35  .  > 14.59% removed (5507 out of 37753; 32246 remain)
+INFO 31-07-20 22:52:35  . Filter Chants By Genre:
+INFO 31-07-20 22:52:35  . Include only chants with a certain genre
+INFO 31-07-20 22:52:35  .  * include=['genre_a']
+INFO 31-07-20 22:52:35  .  > 52.06% removed (16787 out of 32246; 15459 remain)
+INFO 31-07-20 22:52:35  . Filter Chants Not Starting With G Clef:
+INFO 31-07-20 22:52:35  . Exclude chants that do not start with a G clef
+INFO 31-07-20 22:52:35  .  > 0.05% removed (7 out of 15459; 15452 remain)
+INFO 31-07-20 22:52:35  . Filter Chants With F Clef:
+INFO 31-07-20 22:52:35  . Exclude chants that contain an F clef
+INFO 31-07-20 22:52:35  .  > 0.00% removed (0 out of 15452; 15452 remain)
+INFO 31-07-20 22:52:35  . Filter Chants With Missing Pitches:
+INFO 31-07-20 22:52:35  . Filter chants with missing pitches: containing the substring 6------6
+INFO 31-07-20 22:52:35  .  > 7.54% removed (1165 out of 15452; 14287 remain)
+INFO 31-07-20 22:52:35  . Filter Chants With Nonvolpiano Chars:
+INFO 31-07-20 22:52:35  . Exclude all chants with non-volpiano characters
+INFO 31-07-20 22:52:35  .  > 0.03% removed (5 out of 14287; 14282 remain)
+INFO 31-07-20 22:52:35  . Filter Chants Without Word Boundary:
+INFO 31-07-20 22:52:35  . Only include chants with '---' in their volpiano
+INFO 31-07-20 22:52:35  .  > 0.08% removed (11 out of 14282; 14271 remain)
+INFO 31-07-20 22:52:36  . Filter Chants With Duplicated Notes:
+INFO 31-07-20 22:52:36  . Filter duplicate chants: whose notes occur multiple times
+INFO 31-07-20 22:52:36  .  > 2.84% removed (406 out of 14271; 13865 remain)
+INFO 31-07-20 22:52:36 Generate train and test split... (random_state={rs})
+INFO 31-07-20 22:52:36 Split in training (N=9706) and test (N=4159)
+INFO 31-07-20 22:52:36  > Stored to data/run-0/antiphon/full/test-chants.csv
+INFO 31-07-20 22:52:36    md5 checksum: 5955720515cdf0eeb2778705680191c5
+INFO 31-07-20 22:52:36  > Stored to data/run-0/antiphon/full/train-chants.csv
+INFO 31-07-20 22:52:36    md5 checksum: 5b313a6903d0bd6a219c7ca3ab2ded9f
+INFO 31-07-20 22:52:36 Generate segmentations...
+INFO 31-07-20 22:52:45  > Stored to data/run-0/antiphon/full/train-representation-pitch.csv
+INFO 31-07-20 22:52:45    md5 checksum: 7f3ce58fe72e1ab8675fd391ee6dab07
+INFO 31-07-20 22:52:49  > Stored to data/run-0/antiphon/full/test-representation-pitch.csv
+INFO 31-07-20 22:52:49    md5 checksum: 8bf5160f6c42b33e9316feb65e76450a
+INFO 31-07-20 22:52:49 Generate other representations...
+INFO 31-07-20 22:52:49  dependent interval representation
+INFO 31-07-20 22:53:08  > Stored to data/run-0/antiphon/full/train-representation-interval-dependent.csv
+INFO 31-07-20 22:53:08    md5 checksum: 4aace4a2f8fbbe9c1b6e0dc3d46034e6
+INFO 31-07-20 22:53:16  > Stored to data/run-0/antiphon/full/test-representation-interval-dependent.csv
+INFO 31-07-20 22:53:17    md5 checksum: e6bba772c64c57bea70c2653178c14b0
+INFO 31-07-20 22:53:17  independent interval representation
+INFO 31-07-20 22:53:53  > Stored to data/run-0/antiphon/full/train-representation-interval-independent.csv
+INFO 31-07-20 22:53:53    md5 checksum: a96ec0780b97cdf9cd6b117c13121ada
+INFO 31-07-20 22:54:07  > Stored to data/run-0/antiphon/full/test-representation-interval-independent.csv
+INFO 31-07-20 22:54:07    md5 checksum: 2fc1f55a3ef614af1a3912ddca9125f2
+INFO 31-07-20 22:54:07  dependent contour representation
+INFO 31-07-20 22:54:22  > Stored to data/run-0/antiphon/full/train-representation-contour-dependent.csv
+INFO 31-07-20 22:54:22    md5 checksum: 76d28f20f6bdc78aa8b7cba3036d36f9
+INFO 31-07-20 22:54:28  > Stored to data/run-0/antiphon/full/test-representation-contour-dependent.csv
+INFO 31-07-20 22:54:28    md5 checksum: 1170f41668030338b908d47fbef2d739
+INFO 31-07-20 22:54:28  independent contour representation
+INFO 31-07-20 22:55:04  > Stored to data/run-0/antiphon/full/train-representation-contour-independent.csv
+INFO 31-07-20 22:55:04    md5 checksum: 5fb7785fcfa872a3bbbd044849442a7d
+INFO 31-07-20 22:55:18  > Stored to data/run-0/antiphon/full/test-representation-contour-independent.csv
+INFO 31-07-20 22:55:19    md5 checksum: 13e2a15d00bd2eac6c9abc2d1b59a64f
+INFO 31-07-20 22:55:19 Extract features...
+INFO 31-07-20 22:55:22  > Stored to data/run-0/antiphon/full/train-features.csv
+INFO 31-07-20 22:55:22    md5 checksum: 6cf6c0df4d440910a13f935344d78142
+INFO 31-07-20 22:55:24  > Stored to data/run-0/antiphon/full/test-features.csv
+INFO 31-07-20 22:55:24    md5 checksum: d8edd4550914048b64892bb74290cfb4
+INFO 31-07-20 22:55:24 ——————————————————————————————————————————————————

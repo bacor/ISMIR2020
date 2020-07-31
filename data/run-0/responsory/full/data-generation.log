@@ -1,0 +1,85 @@
+INFO 31-07-20 22:47:55 **************************************************
+INFO 31-07-20 22:47:55 * CREATING DATASET
+INFO 31-07-20 22:47:55 * genre: genre_r
+INFO 31-07-20 22:47:55 * train_frac: 0.7
+INFO 31-07-20 22:47:55 * remove_duplicate_cantus_ids: False
+INFO 31-07-20 22:47:55 * output_dir: data/run-0/responsory/full
+INFO 31-07-20 22:47:55 **************************************************
+INFO 31-07-20 22:47:55 Setting numpy random seed random_state=0
+INFO 31-07-20 22:47:55 Filtering chants...
+INFO 31-07-20 22:47:55  . Filter Chants Without Volpiano:
+INFO 31-07-20 22:47:55  . Exclude all chants with an empty volpiano field
+INFO 31-07-20 22:47:55  .  > 87.20% removed (433443 out of 497071; 63628 remain)
+INFO 31-07-20 22:47:55  . Filter Chants Without Notes:
+INFO 31-07-20 22:47:55  . Exclude all chants without notes
+INFO 31-07-20 22:47:55  .  > 2.87% removed (1825 out of 63628; 61803 remain)
+INFO 31-07-20 22:47:55  . Filter Chants Without Simple Mode:
+INFO 31-07-20 22:47:55  . Include only chants with simple modes: 1-8, not transposed
+INFO 31-07-20 22:47:55  .  * include_transposed=False
+INFO 31-07-20 22:47:55  .  > 23.02% removed (14227 out of 61803; 47576 remain)
+INFO 31-07-20 22:47:55  . Filter Chants Without Full Text:
+INFO 31-07-20 22:47:55  . Filter chants without full text
+INFO 31-07-20 22:47:55  .  > 20.65% removed (9823 out of 47576; 37753 remain)
+INFO 31-07-20 22:47:55  . Filter Chants Where Incipit Is Full Text:
+INFO 31-07-20 22:47:55  . Filter chants whose incipit is identical to the full text
+INFO 31-07-20 22:47:55  .  > 14.59% removed (5507 out of 37753; 32246 remain)
+INFO 31-07-20 22:47:55  . Filter Chants By Genre:
+INFO 31-07-20 22:47:55  . Include only chants with a certain genre
+INFO 31-07-20 22:47:55  .  * include=['genre_r']
+INFO 31-07-20 22:47:55  .  > 77.41% removed (24961 out of 32246; 7285 remain)
+INFO 31-07-20 22:47:55  . Filter Chants Not Starting With G Clef:
+INFO 31-07-20 22:47:55  . Exclude chants that do not start with a G clef
+INFO 31-07-20 22:47:55  .  > 0.05% removed (4 out of 7285; 7281 remain)
+INFO 31-07-20 22:47:55  . Filter Chants With F Clef:
+INFO 31-07-20 22:47:55  . Exclude chants that contain an F clef
+INFO 31-07-20 22:47:55  .  > 0.00% removed (0 out of 7281; 7281 remain)
+INFO 31-07-20 22:47:55  . Filter Chants With Missing Pitches:
+INFO 31-07-20 22:47:55  . Filter chants with missing pitches: containing the substring 6------6
+INFO 31-07-20 22:47:55  .  > 2.73% removed (199 out of 7281; 7082 remain)
+INFO 31-07-20 22:47:56  . Filter Chants With Nonvolpiano Chars:
+INFO 31-07-20 22:47:56  . Exclude all chants with non-volpiano characters
+INFO 31-07-20 22:47:56  .  > 0.06% removed (4 out of 7082; 7078 remain)
+INFO 31-07-20 22:47:56  . Filter Chants Without Word Boundary:
+INFO 31-07-20 22:47:56  . Only include chants with '---' in their volpiano
+INFO 31-07-20 22:47:56  .  > 0.10% removed (7 out of 7078; 7071 remain)
+INFO 31-07-20 22:47:56  . Filter Chants With Duplicated Notes:
+INFO 31-07-20 22:47:56  . Filter duplicate chants: whose notes occur multiple times
+INFO 31-07-20 22:47:56  .  > 0.57% removed (40 out of 7071; 7031 remain)
+INFO 31-07-20 22:47:56 Generate train and test split... (random_state={rs})
+INFO 31-07-20 22:47:56 Split in training (N=4922) and test (N=2109)
+INFO 31-07-20 22:47:56  > Stored to data/run-0/responsory/full/test-chants.csv
+INFO 31-07-20 22:47:56    md5 checksum: d8b66c35ecf9147824b8e4e1ffb99c4f
+INFO 31-07-20 22:47:56  > Stored to data/run-0/responsory/full/train-chants.csv
+INFO 31-07-20 22:47:56    md5 checksum: 6c06b606cbe6b8df29d6e91f4ec492b6
+INFO 31-07-20 22:47:56 Generate segmentations...
+INFO 31-07-20 22:48:00  > Stored to data/run-0/responsory/full/train-representation-pitch.csv
+INFO 31-07-20 22:48:00    md5 checksum: ff564a01b247557604929924351d8216
+INFO 31-07-20 22:48:02  > Stored to data/run-0/responsory/full/test-representation-pitch.csv
+INFO 31-07-20 22:48:02    md5 checksum: a65eb43a7d191010871613671b3bd6a2
+INFO 31-07-20 22:48:02 Generate other representations...
+INFO 31-07-20 22:48:02  dependent interval representation
+INFO 31-07-20 22:48:13  > Stored to data/run-0/responsory/full/train-representation-interval-dependent.csv
+INFO 31-07-20 22:48:13    md5 checksum: 221f21be0e2381e2fc13dd6deda7d86d
+INFO 31-07-20 22:48:17  > Stored to data/run-0/responsory/full/test-representation-interval-dependent.csv
+INFO 31-07-20 22:48:17    md5 checksum: 095be6a5cb86503f417bc4b9e5b9bcdc
+INFO 31-07-20 22:48:17  independent interval representation
+INFO 31-07-20 22:48:47  > Stored to data/run-0/responsory/full/train-representation-interval-independent.csv
+INFO 31-07-20 22:48:47    md5 checksum: b43d4e4afbb3fe557944dfb0cf7f3096
+INFO 31-07-20 22:49:01  > Stored to data/run-0/responsory/full/test-representation-interval-independent.csv
+INFO 31-07-20 22:49:01    md5 checksum: 8806e792dbed7e2003ef6d057f550af4
+INFO 31-07-20 22:49:01  dependent contour representation
+INFO 31-07-20 22:49:15  > Stored to data/run-0/responsory/full/train-representation-contour-dependent.csv
+INFO 31-07-20 22:49:15    md5 checksum: c5e7f23f1d823c8af3d48a73e713b07c
+INFO 31-07-20 22:49:20  > Stored to data/run-0/responsory/full/test-representation-contour-dependent.csv
+INFO 31-07-20 22:49:20    md5 checksum: 421ea71dbf350b0d1982ab8b5fdcd9bf
+INFO 31-07-20 22:49:20  independent contour representation
+INFO 31-07-20 22:49:48  > Stored to data/run-0/responsory/full/train-representation-contour-independent.csv
+INFO 31-07-20 22:49:48    md5 checksum: 444f48b9fbfcea6c742f81b706c1c322
+INFO 31-07-20 22:49:59  > Stored to data/run-0/responsory/full/test-representation-contour-independent.csv
+INFO 31-07-20 22:49:59    md5 checksum: 37605483c68899c48dc7f0be6b255252
+INFO 31-07-20 22:49:59 Extract features...
+INFO 31-07-20 22:50:01  > Stored to data/run-0/responsory/full/train-features.csv
+INFO 31-07-20 22:50:01    md5 checksum: ea42004697a8623e91edeb46d7cab4db
+INFO 31-07-20 22:50:02  > Stored to data/run-0/responsory/full/test-features.csv
+INFO 31-07-20 22:50:02    md5 checksum: 9e99505d4fb6ed396bb32e9febfa6e41
+INFO 31-07-20 22:50:02 ——————————————————————————————————————————————————
