@@ -6,7 +6,6 @@ __pycache__/
 # Excluded full Cantus data: too large
 cantuscorpus/
 
-experiments
 results
 tests
 notebooks
