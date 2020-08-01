@@ -257,7 +257,7 @@ def run(experiment_name,
         level=logging.INFO) 
 
     conditions, parts = get_conditions(
-        CLASSIFIERS[0], genres, subsets, representations, segmentations)
+        [CLASSIFIERS[0]], genres, subsets, representations, segmentations)
     for condition in conditions:
         del condition['classifier']
         for embedder in embedders:
@@ -267,7 +267,7 @@ def run(experiment_name,
                     split=split,
                     refresh=refresh,
                     output_dir=os.path.join(results_dir, 'embeddings'),
-                    data_dir=DATA_DIR,
+                    data_dir=data_dir,
                     **condition)
                 visualize_embedding(
                     embedder=embedder, 
@@ -278,12 +278,14 @@ def run(experiment_name,
                     **condition)
 
 if __name__ == '__main__':
-    run('tfidf-tune-20-iter',
+    run('tfidf-run-0',
         embedders=['pca', 'tsne'],
-        genres=['responsory'],
+        genres=['responsory'],#, 'antiphon'],
         subsets=['full'],
         splits=['test'],
         refresh=True,
+        data_dir=os.path.join(ROOT_DIR, 'data/run-0'),
+        results_dir=os.path.join(ROOT_DIR, 'results/run-0'),
         # representations=['contour-independent'],
         # segmentations=['words', 'syllables', '6-mer']
         )
