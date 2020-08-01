@@ -2,6 +2,7 @@
 env
 __pycache__/
 .ipynb_checkpoints/
+.DS_Store
 
 # Excluded full Cantus data: too large
 cantuscorpus/
