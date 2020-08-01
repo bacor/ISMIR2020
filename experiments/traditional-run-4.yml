@@ -1,0 +1,13 @@
+experiment_type: traditional
+experiment_name: traditional-run-4
+description: >
+  The complete 'traditional' classification experiment: mode classification 
+  based on the final, ambitus and initial, in all possible combinations.
+genres: 'all'
+subsets: 'all'
+feature_sets: 'all'
+n_iter: 20
+n_splits: 5
+random_state: 4
+data_dir: data/run-4
+results_dir: results/run-4

@@ -1,0 +1,15 @@
+experiment_type: profile
+experiment_name: profile-run-3
+description: >
+  A mode classification experiment using pitch, pitch-class and repetition 
+  profiles and a k-NN classifier. We tune each model extensively using 5-fold
+  cross-validation and a randomized search of 100 randomly chosen 
+  hyperparameters from a suitable grid.
+genres: 'all'
+subsets: 'all'
+profiles: 'all'
+n_iter: 100
+n_splits: 5
+random_state: 3
+data_dir: data/run-3
+results_dir: results/run-3
