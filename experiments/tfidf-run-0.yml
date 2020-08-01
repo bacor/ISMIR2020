@@ -1,0 +1,15 @@
+experiment_type: tfidf
+experiment_name: tfidf-run-0
+description: >
+  Complete experiment with all conditions and tuning 
+  for 20 iterations.
+classifiers: 'all'
+genres: 'all'
+subsets: 'all'
+representations: 'all'
+segmentations: 'all'
+n_iter: 20
+n_splits: 5
+random_state: 0
+data_dir: data/run-0/
+results_dir: results/run-0/

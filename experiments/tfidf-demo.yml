@@ -1,0 +1,16 @@
+experiment_type: tfidf
+experiment_name: tfidf-demo
+description: >
+  Demo of the tfidf classification experiment, run on the demo data with 
+  virtually no tuning. The experiment should run in a few minutes. 
+  Only for testing purposes.
+classifiers: 'all'
+genres: 'all'
+subsets: 'all'
+representations: 'all'
+segmentations: 'all'
+n_iter: 1
+n_splits: 2
+random_state: 0
+data_dir: demo-data/run-0/
+results_dir: demo-results/run-0/
