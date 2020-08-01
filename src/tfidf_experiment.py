@@ -34,7 +34,7 @@ from .helpers import start_experiment_log
 from .classification import train_model
 from .classification import get_scores
 
-np.random.state(0)
+np.random.seed(0)
 
 # Globals
 # —————————————————————————————————————————————————————————————————————————————
@@ -170,7 +170,7 @@ def get_vectorizer():
         # identical for all our models.
         use_idf=True,
         smooth_idf=True,
-        sublinear_tf=True,
+        sublinear_tf=False,
 
         # Notes and liquescents are distinguished in volpiano by their case
         lowercase=False,
