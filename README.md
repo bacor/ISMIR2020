@@ -1,8 +1,6 @@
 Mode Classification and Natural Units in Plainchant
 ==================================================
 
-----
-
 <img src="figures/teaser/teaser.jpg?raw=true" width="800" 
     title="Three approaches to mode classification in plainchant compared">
 
