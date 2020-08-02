@@ -1,8 +1,8 @@
 Mode Classification and Natural Units in Plainchant
 ==================================================
 
-This repository contains the data and code for the paper 'Mode Classification and Natural 
-Units in Plainchant' presented at the [International Society
+This repository contains the data and code for the paper 'Mode Classification 
+and Natural Units in Plainchant' accepted at the [International Society
 for Music Information Retrieval (ISMIR)
 Conference 2020](https://ismir.github.io/ISMIR2020/).
 
