@@ -1,6 +1,11 @@
 Mode Classification and Natural Units in Plainchant
 ==================================================
 
+This repository contains all code for the paper 'Mode Classification and Natural 
+Units in Plainchant' presented at [ISMIR 2020](https://ismir.github.io/ISMIR2020/).
+
+----
+
 <img src="figures/teaser/teaser.jpg?raw=true" width="800" 
     title="Three approaches to mode classification in plainchant compared">
 
