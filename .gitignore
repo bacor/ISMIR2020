@@ -31,9 +31,6 @@ kn28-1161_181.jpg
 # Others
 tmp/
 excluded/
-experiments-old/
 demo-results/
 excluded_notebooks/
 *.zip
-notes/
-
