@@ -50,12 +50,12 @@ Montréal, Canada, 2020
 Repository structure 
 --------------------
 
-- `cantuscorpus`: the corpus used in this study is not included in the 
+- **`cantuscorpus`** The corpus used in this study is not included in the 
 repository, but can be downloaded here: 
 [CantusCorpus v0.2](https://github.com/bacor/cantuscorpus/releases/tag/v0.2). 
 Just remove the `-v0.2` from the directory name, and place it in the root of the
 repository,
-- `data/`: the data used in the experiments. We report results for five 
+- **`data/`** Contains the  data used in the experiments. We report results for five 
 independent runs of whole study, for which we generated five datasets with 
 different train/test splits, named `run-0` to `run-4`. Only the data for the
 first run is included in the repository, but the other datasets can be 
@@ -74,22 +74,22 @@ chants) or `subset`, meaning only the subset without melody variants; `split`
 can be `train` or `test` and the `representation` can be `pitch`, 
 `interval-dependent`, `interval-independent`, `contour-dependent` and
 `contour-independent`.
-- `demo-data/`: has the same structure as `data`, but is generated using the
+- **`demo-data/`** This folder has the same structure as `data`, but is generated using the
 `chant-demo-sample.csv` table from CantusCorpus. This demo data is useful
 during development.
-- `experiments`: every experiment has a number of parameters, like the type of
+- **`experiments`** Every experiment has a number of parameters, like the type of
 model, the number of cross-validation splits, but also what directory to load
 the data from. To record which parameters where used to produce which results, 
 we specify the experiment parameters in YAML files in the `experiments` folder.
-- `figures/`: all figures made in this study. Most plots are generated using
+- **`figures/`**: all figures made in this study. Most plots are generated using
 the notebooks in `notebooks/`, and then finalized in Affinity Designer (those
 files are not included). The directory also contains many figures that are not
 in the paper or the supplements, such heatmaps with other evaluation metrics.
-- `notebooks/`: Jupyter notebooks used to generate the figures, or to do other
-analyses.
-- `src/`: all code used to generate the datasets, run the experiments and 
+- **`notebooks/`** Contains the Jupyter notebooks used to generate the figures, 
+or to do other analyses.
+- **`src/`** Contains all code used to generate the datasets, run the experiments and 
 compute tf–idf vector embeddings. All Python files are documented.
-- `tests/`: some unittests for some of the code in `src/`.
+- **`tests/`** Contains some unittests for some of the code in `src/`.
 
 
 Python setup
