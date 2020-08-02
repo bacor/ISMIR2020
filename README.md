@@ -1,12 +1,5 @@
-To do: title
-==========================
-
-...
-
-Citation
---------
-
-**To do**
+Mode Classification and Natual Units in Plainchant
+==================================================
 
 Repository structure 
 --------------------
