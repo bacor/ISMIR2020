@@ -2,14 +2,16 @@ Mode Classification and Natural Units in Plainchant
 ==================================================
 
 This repository contains all code for the paper 'Mode Classification and Natural 
-Units in Plainchant' presented at [ISMIR 2020](https://ismir.github.io/ISMIR2020/).
+Units in Plainchant' presented at [International Society
+for Music Information Retrieval
+Conference 2020](https://ismir.github.io/ISMIR2020/).
 
 ----
 
 <img src="figures/teaser/teaser.jpg?raw=true" width="800" 
     title="Three approaches to mode classification in plainchant compared">
 
-**Main findings.**
+**Summary.**
 Our study compares three approaches to classifying mode in medieval plainchant
 from the Cantus database. The eight modes are the central tonalities around 
 which the repertoire is organized. The *classical approach* classifies melodies
