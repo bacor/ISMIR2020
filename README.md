@@ -29,6 +29,12 @@ the melody goes up or down (its contour). Could this mean that, just like a
 sentence is made by stringing together words, a chant melody is made together
 by concatenating small musical motifs?
 
+**Citation**
+Bas Cornelissen, Willem Zuidema,and John Ashley Burgoyne, 
+“Mode classification and natural units in plain-chant”, in 
+*Proc. of the 21st Int. Society for Music Information Retrieval Conf.*, 
+Montréal, Canada, 2020
+
 ---
 
 
