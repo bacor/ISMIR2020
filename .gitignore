@@ -21,6 +21,9 @@ results/**/antiphon
 results/**/responsory
 results/*/embeddings-tfidf-run-0/embeddings
 !results/run-0/embeddings-tfidf-run-0/figures/responsory
+!results/run-0/*/antiphon
+!results/run-0/*/responsory
+
 *.model
 *.afdesign
 kn28-1161_181.jpg
