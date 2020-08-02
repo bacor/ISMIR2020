@@ -41,11 +41,11 @@ Montréal, Canada, 2020
 
 &nbsp;
 
-[Repository structure](#repository-structure) 
-[Python setup](#python-setup) 
-[Generating the data](#generating-the-data) 
-[Running the experiments](#running-the-experiments) 
-[Analyzing the results](#analyzing-the-results)
+[Repository structure](#repository-structure)
+ • [Python setup](#python-setup) 
+ • [Generating the data](#generating-the-data) 
+ • [Running the experiments](#running-the-experiments) 
+ • [Analyzing the results](#analyzing-the-results)
 
 Repository structure 
 --------------------
