@@ -1,4 +1,4 @@
-Mode Classification and Natual Units in Plainchant
+Mode Classification and Natural Units in Plainchant
 ==================================================
 
 Repository structure 
