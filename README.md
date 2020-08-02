@@ -50,7 +50,7 @@ Montréal, Canada, 2020
 Repository structure 
 --------------------
 
-- **`cantuscorpus`** The corpus used in this study is not included in the 
+- **`cantuscorpus/`** The corpus used in this study is not included in the 
 repository, but can be downloaded here: 
 [CantusCorpus v0.2](https://github.com/bacor/cantuscorpus/releases/tag/v0.2). 
 Just remove the `-v0.2` from the directory name, and place it in the root of the
@@ -77,7 +77,7 @@ can be `train` or `test` and the `representation` can be `pitch`,
 - **`demo-data/`** This folder has the same structure as `data`, but is generated using the
 `chant-demo-sample.csv` table from CantusCorpus. This demo data is useful
 during development.
-- **`experiments`** Every experiment has a number of parameters, like the type of
+- **`experiments/`** Every experiment has a number of parameters, like the type of
 model, the number of cross-validation splits, but also what directory to load
 the data from. To record which parameters where used to produce which results, 
 we specify the experiment parameters in YAML files in the `experiments` folder.
@@ -113,32 +113,41 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-
-Then you can start Jupyter Lab to run the notebooks:
-
-```bash
-$ jupyter lab
-```
-
 Generating the data
 -------------------
 
-To generate the data
-
 ```bash
 # Generate the complete dataset
-python -m src.generate_data
+python -m src.generate_data --seed=0
 
 # Generate a demo dataset
-python -m src.generate_data --what=demo
+python -m src.generate_data --what=demo --seed=0
 ```
+
+Here `seed` is a number used to set the random seed. This is used to generate
+five different datasets used in five independent runs (with seeds 0, ..., 5).
 
 Running the experiments
 -----------------------
 
-To do
+```bash
+python cli.py run experiments/profile-demo.yml
+python cli.py run experiments/profile-run-0.yml
+python cli.py run experiments/profile-run-1.yml
+# ...
+```
 
 Analyzing the results
 ---------------------
 
-To do
+All plots are made in the Jupyter notebooks in `notebooks/`. However, the
+low-dimensional embeddings of the tf-idf vectors are computed in 
+`src/tfidf_visualization.py`; there's no cli for this, but tweaking the script
+is straigtforward.
+
+
+License
+-------
+
+All code is released under an MIT licence. The figures are released under a
+CC-BY 4.0 license.
