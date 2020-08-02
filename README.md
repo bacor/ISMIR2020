@@ -39,6 +39,14 @@ Montréal, Canada, 2020
 
 &nbsp;
 
+&nbsp;
+
+[Repository structure](#repository-structure) 
+[Python setup](#python-setup) 
+[Generating the data](#generating-the-data) 
+[Running the experiments](#running-the-experiments) 
+[Analyzing the results](#analyzing-the-results)
+
 Repository structure 
 --------------------
 
@@ -99,3 +107,13 @@ python -m src.generate_data
 # Generate a demo dataset
 python -m src.generate_data --what=demo
 ```
+
+Running the experiments
+-----------------------
+
+To do
+
+Analyzing the results
+---------------------
+
+To do
