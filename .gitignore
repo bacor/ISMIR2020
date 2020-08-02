@@ -16,17 +16,14 @@ demo-data/run-2/
 demo-data/run-3/
 demo-data/run-4/
 
-# Results
+# Results and figures
 results/**/antiphon
 results/**/responsory
 results/*/embeddings-tfidf-run-0/embeddings
 !results/run-0/embeddings-tfidf-run-0/figures/responsory
-
-# Figures
+*.model
 *.afdesign
 kn28-1161_181.jpg
-
-notebooks
 
 # Others
 tmp/
@@ -37,4 +34,3 @@ excluded_notebooks/
 *.zip
 notes/
 
-*.model
