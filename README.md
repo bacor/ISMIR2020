@@ -55,16 +55,41 @@ repository, but can be downloaded here:
 [CantusCorpus v0.2](https://github.com/bacor/cantuscorpus/releases/tag/v0.2). 
 Just remove the `-v0.2` from the directory name, and place it in the root of the
 repository,
-- `data/`: the data used in all experiments. This directory
-    - `data/[genre]/full`: all antiphon data
-    - `data/[genre]/subset`: a subset where we made sure that every chant had a 
-    unique (cantus_id, mode) combination. This effectively means there are no 
-    (or in any case fewer) melody variants in the corpus.
+- `data/`: the data used in the experiments. We report results for five 
+independent runs of whole study, for which we generated five datasets with 
+different train/test splits, named `run-0` to `run-4`. Only the data for the
+first run is included in the repository, but the other datasets can be 
+reproduced as the generation is deterministic. Data per run is further structured 
+as follows:
+    - `data/run-[i]/[genre]/[subset]/[split]-chants.csv`: a chants file with 
+    details about the chant, including the volpiano and mode.
+    - `data/run-[i]/[genre]/[subset]/[split]-features.csv`: a table with all
+    features used by both the classical and the profile-based approach.
+    - `data/run-[i]/[genre]/[subset]/[split]-representation-[representation].csv`
+    A table containing chants in the given representation, segmented in many
+    different ways: besides the natural segmentations, 1–16 grams (or *k-mers*)
+    and three random baselines.
+where `genre` can be `antiphon` or `responsory`; `subset` can be `full` (all 
+chants) or `subset`, meaning only the subset without melody variants; `split` 
+can be `train` or `test` and the `representation` can be `pitch`, 
+`interval-dependent`, `interval-independent`, `contour-dependent` and
+`contour-independent`.
 - `demo-data/`: has the same structure as `data`, but is generated using the
 `chant-demo-sample.csv` table from CantusCorpus. This demo data is useful
 during development.
-- `experiments`: a directory with yml files containing experiment settings
-- `src/`:
+- `experiments`: every experiment has a number of parameters, like the type of
+model, the number of cross-validation splits, but also what directory to load
+the data from. To record which parameters where used to produce which results, 
+we specify the experiment parameters in YAML files in the `experiments` folder.
+- `figures/`: all figures made in this study. Most plots are generated using
+the notebooks in `notebooks/`, and then finalized in Affinity Designer (those
+files are not included). The directory also contains many figures that are not
+in the paper or the supplements, such heatmaps with other evaluation metrics.
+- `notebooks/`: Jupyter notebooks used to generate the figures, or to do other
+analyses.
+- `src/`: all code used to generate the datasets, run the experiments and 
+compute tf–idf vector embeddings. All Python files are documented.
+- `tests/`: some unittests for some of the code in `src/`.
 
 
 Python setup
