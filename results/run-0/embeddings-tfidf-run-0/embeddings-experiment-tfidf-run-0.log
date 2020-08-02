@@ -1,0 +1,72 @@
+INFO 02-08-20 11:56:03 ------------------------------------------------------------
+INFO 02-08-20 11:56:03 Computing embeddings for segmentation=syllables and representation=pitch
+INFO 02-08-20 11:56:03 > data=data/run-0, split=test, output_dir=results/run-0/embeddings-tfidf-run-0/embeddings, num_datapoints=-1
+INFO 02-08-20 11:56:03 Computing PCA embeddings...
+INFO 02-08-20 11:56:03 > vectorizer: strip_accents=None, stop_words=None, ngram_range=(1, 1), max_df=1.0, min_df=1, max_features=5000, use_idf=True, smooth_idf=True, sublinear_tf=False, lowercase=False, analyzer=word, token_pattern=[^ ]+
+INFO 02-08-20 11:56:04 > Done in 1.06s
+INFO 02-08-20 11:56:04 > Stored to results/run-0/embeddings-tfidf-run-0/embeddings/antiphon/full/pitch/pca-test-syllables.csv
+INFO 02-08-20 11:56:04 ------------------------------------------------------------
+INFO 02-08-20 11:56:04 Visualizing embeddings for segmentation=syllables and representation=pitch
+INFO 02-08-20 11:56:04 > embeddings_dir=results/run-0/embeddings-tfidf-run-0/embeddings, output_dir=results/run-0/embeddings-tfidf-run-0/figures
+INFO 02-08-20 11:56:04 Plotting representations...
+INFO 02-08-20 11:56:05 > Stored figure to results/run-0/embeddings-tfidf-run-0/figures/antiphon/full/pitch/pca-test-syllables.png
+INFO 02-08-20 11:56:05 ------------------------------------------------------------
+INFO 02-08-20 11:56:05 Computing embeddings for segmentation=6-mer and representation=pitch
+INFO 02-08-20 11:56:05 > data=data/run-0, split=test, output_dir=results/run-0/embeddings-tfidf-run-0/embeddings, num_datapoints=-1
+INFO 02-08-20 11:56:05 Computing PCA embeddings...
+INFO 02-08-20 11:56:05 > vectorizer: strip_accents=None, stop_words=None, ngram_range=(1, 1), max_df=1.0, min_df=1, max_features=5000, use_idf=True, smooth_idf=True, sublinear_tf=False, lowercase=False, analyzer=word, token_pattern=[^ ]+
+INFO 02-08-20 11:56:07 > Done in 2.34s
+INFO 02-08-20 11:56:07 > Stored to results/run-0/embeddings-tfidf-run-0/embeddings/antiphon/full/pitch/pca-test-6-mer.csv
+INFO 02-08-20 11:56:07 ------------------------------------------------------------
+INFO 02-08-20 11:56:07 Visualizing embeddings for segmentation=6-mer and representation=pitch
+INFO 02-08-20 11:56:07 > embeddings_dir=results/run-0/embeddings-tfidf-run-0/embeddings, output_dir=results/run-0/embeddings-tfidf-run-0/figures
+INFO 02-08-20 11:56:07 Plotting representations...
+INFO 02-08-20 11:56:08 > Stored figure to results/run-0/embeddings-tfidf-run-0/figures/antiphon/full/pitch/pca-test-6-mer.png
+INFO 02-08-20 11:56:08 ------------------------------------------------------------
+INFO 02-08-20 11:56:08 Computing embeddings for segmentation=syllables and representation=interval-independent
+INFO 02-08-20 11:56:08 > data=data/run-0, split=test, output_dir=results/run-0/embeddings-tfidf-run-0/embeddings, num_datapoints=-1
+INFO 02-08-20 11:56:08 Computing PCA embeddings...
+INFO 02-08-20 11:56:08 > vectorizer: strip_accents=None, stop_words=None, ngram_range=(1, 1), max_df=1.0, min_df=1, max_features=5000, use_idf=True, smooth_idf=True, sublinear_tf=False, lowercase=False, analyzer=word, token_pattern=[^ ]+
+INFO 02-08-20 11:56:09 > Done in 0.90s
+INFO 02-08-20 11:56:09 > Stored to results/run-0/embeddings-tfidf-run-0/embeddings/antiphon/full/interval-independent/pca-test-syllables.csv
+INFO 02-08-20 11:56:09 ------------------------------------------------------------
+INFO 02-08-20 11:56:09 Visualizing embeddings for segmentation=syllables and representation=interval-independent
+INFO 02-08-20 11:56:09 > embeddings_dir=results/run-0/embeddings-tfidf-run-0/embeddings, output_dir=results/run-0/embeddings-tfidf-run-0/figures
+INFO 02-08-20 11:56:09 Plotting representations...
+INFO 02-08-20 11:56:09 > Stored figure to results/run-0/embeddings-tfidf-run-0/figures/antiphon/full/interval-independent/pca-test-syllables.png
+INFO 02-08-20 11:56:09 ------------------------------------------------------------
+INFO 02-08-20 11:56:09 Computing embeddings for segmentation=6-mer and representation=interval-independent
+INFO 02-08-20 11:56:09 > data=data/run-0, split=test, output_dir=results/run-0/embeddings-tfidf-run-0/embeddings, num_datapoints=-1
+INFO 02-08-20 11:56:10 Computing PCA embeddings...
+INFO 02-08-20 11:56:10 > vectorizer: strip_accents=None, stop_words=None, ngram_range=(1, 1), max_df=1.0, min_df=1, max_features=5000, use_idf=True, smooth_idf=True, sublinear_tf=False, lowercase=False, analyzer=word, token_pattern=[^ ]+
+INFO 02-08-20 11:56:13 > Done in 2.78s
+INFO 02-08-20 11:56:13 > Stored to results/run-0/embeddings-tfidf-run-0/embeddings/antiphon/full/interval-independent/pca-test-6-mer.csv
+INFO 02-08-20 11:56:13 ------------------------------------------------------------
+INFO 02-08-20 11:56:13 Visualizing embeddings for segmentation=6-mer and representation=interval-independent
+INFO 02-08-20 11:56:13 > embeddings_dir=results/run-0/embeddings-tfidf-run-0/embeddings, output_dir=results/run-0/embeddings-tfidf-run-0/figures
+INFO 02-08-20 11:56:13 Plotting representations...
+INFO 02-08-20 11:56:13 > Stored figure to results/run-0/embeddings-tfidf-run-0/figures/antiphon/full/interval-independent/pca-test-6-mer.png
+INFO 02-08-20 11:56:13 ------------------------------------------------------------
+INFO 02-08-20 11:56:13 Computing embeddings for segmentation=syllables and representation=contour-independent
+INFO 02-08-20 11:56:13 > data=data/run-0, split=test, output_dir=results/run-0/embeddings-tfidf-run-0/embeddings, num_datapoints=-1
+INFO 02-08-20 11:56:13 Computing PCA embeddings...
+INFO 02-08-20 11:56:13 > vectorizer: strip_accents=None, stop_words=None, ngram_range=(1, 1), max_df=1.0, min_df=1, max_features=5000, use_idf=True, smooth_idf=True, sublinear_tf=False, lowercase=False, analyzer=word, token_pattern=[^ ]+
+INFO 02-08-20 11:56:13 > Done in 0.32s
+INFO 02-08-20 11:56:13 > Stored to results/run-0/embeddings-tfidf-run-0/embeddings/antiphon/full/contour-independent/pca-test-syllables.csv
+INFO 02-08-20 11:56:13 ------------------------------------------------------------
+INFO 02-08-20 11:56:13 Visualizing embeddings for segmentation=syllables and representation=contour-independent
+INFO 02-08-20 11:56:13 > embeddings_dir=results/run-0/embeddings-tfidf-run-0/embeddings, output_dir=results/run-0/embeddings-tfidf-run-0/figures
+INFO 02-08-20 11:56:14 Plotting representations...
+INFO 02-08-20 11:56:14 > Stored figure to results/run-0/embeddings-tfidf-run-0/figures/antiphon/full/contour-independent/pca-test-syllables.png
+INFO 02-08-20 11:56:14 ------------------------------------------------------------
+INFO 02-08-20 11:56:14 Computing embeddings for segmentation=6-mer and representation=contour-independent
+INFO 02-08-20 11:56:14 > data=data/run-0, split=test, output_dir=results/run-0/embeddings-tfidf-run-0/embeddings, num_datapoints=-1
+INFO 02-08-20 11:56:14 Computing PCA embeddings...
+INFO 02-08-20 11:56:14 > vectorizer: strip_accents=None, stop_words=None, ngram_range=(1, 1), max_df=1.0, min_df=1, max_features=5000, use_idf=True, smooth_idf=True, sublinear_tf=False, lowercase=False, analyzer=word, token_pattern=[^ ]+
+INFO 02-08-20 11:56:14 > Done in 0.18s
+INFO 02-08-20 11:56:14 > Stored to results/run-0/embeddings-tfidf-run-0/embeddings/antiphon/full/contour-independent/pca-test-6-mer.csv
+INFO 02-08-20 11:56:14 ------------------------------------------------------------
+INFO 02-08-20 11:56:14 Visualizing embeddings for segmentation=6-mer and representation=contour-independent
+INFO 02-08-20 11:56:14 > embeddings_dir=results/run-0/embeddings-tfidf-run-0/embeddings, output_dir=results/run-0/embeddings-tfidf-run-0/figures
+INFO 02-08-20 11:56:14 Plotting representations...
+INFO 02-08-20 11:56:15 > Stored figure to results/run-0/embeddings-tfidf-run-0/figures/antiphon/full/contour-independent/pca-test-6-mer.png

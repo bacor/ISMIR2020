@@ -1,0 +1,379 @@
+INFO 01-08-20 13:02:20 ************************************************************
+INFO 01-08-20 13:02:20 * Experiment: profile-run-3
+INFO 01-08-20 13:02:20 * Description:
+INFO 01-08-20 13:02:20 *   A mode classification experiment using pitch,
+INFO 01-08-20 13:02:20 *   pitch-class and repetition  profiles and a k-NN
+INFO 01-08-20 13:02:20 *   classifier. We tune each model extensively using
+INFO 01-08-20 13:02:20 *   5-fold cross-validation and a randomized search of
+INFO 01-08-20 13:02:20 *   100 randomly chosen  hyperparameters from a
+INFO 01-08-20 13:02:20 *   suitable grid.
+INFO 01-08-20 13:02:20 * data_dir: data/run-3
+INFO 01-08-20 13:02:20 * n_iter: 100
+INFO 01-08-20 13:02:20 * n_splits: 5
+INFO 01-08-20 13:02:20 * num_conditions: 12
+INFO 01-08-20 13:02:20 * subsets: ['full', 'subset']
+INFO 01-08-20 13:02:20 * genres: ['responsory', 'antiphon']
+INFO 01-08-20 13:02:20 * profiles: ['pitch', 'pitch_class', 'repetition']
+INFO 01-08-20 13:02:20 ************************************************************
+INFO 01-08-20 13:02:20 Training model...
+INFO 01-08-20 13:02:20 * profile=pitch
+INFO 01-08-20 13:02:20 * genre=responsory
+INFO 01-08-20 13:02:20 * subset=full
+INFO 01-08-20 13:02:21 * Training/test size: 4922/2109
+INFO 01-08-20 13:02:21 * Num. features: 34
+INFO 01-08-20 13:02:21 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 13:02:21   Tune using randomized search (n_iter=100, random_state=24)
+INFO 01-08-20 13:02:21   Tuned params: ['n_neighbors', 'weights', 'algorithm', 'leaf_size']
+INFO 01-08-20 13:06:21   Best params: {'weights': 'distance', 'n_neighbors': 20, 'leaf_size': 56, 'algorithm': 'kd_tree'}
+INFO 01-08-20 13:06:21   Mean cross validation statistics for best params:
+INFO 01-08-20 13:06:21   - Train/test accuracy: 100.00%%/83.62%% (rank 1)
+INFO 01-08-20 13:06:21   - Train/test precision: 100.00%%/83.91%% (rank 1)
+INFO 01-08-20 13:06:21   - Train/test recall: 100.00%%/83.62%% (rank 1)
+INFO 01-08-20 13:06:21   - Train/test f1: 100.00%%/83.52%% (rank 1)
+INFO 01-08-20 13:06:21   Setting model parameters to highest-accuracy params
+INFO 01-08-20 13:06:21   Tuning done in 240.35s
+INFO 01-08-20 13:06:21 > Training done in 0.01s
+INFO 01-08-20 13:06:21 > Serialized model to results/run-3/profile-run-3/responsory/full/pitch.model
+INFO 01-08-20 13:06:21   md5 checksum: d0441ef1a7011feeb395ec74eeb1476e
+INFO 01-08-20 13:06:21 > Stored tuning results to results/run-3/profile-run-3/responsory/full/pitch-tuning.csv
+INFO 01-08-20 13:06:21   md5 checksum: bfb6be2fa33428e5ebebfadb29066c83
+INFO 01-08-20 13:06:22 > Stored train predictions to results/run-3/profile-run-3/responsory/full/pitch-train-pred.txt
+INFO 01-08-20 13:06:22   md5 checksum: 3439a78efe6faf3cae71de4eefc389de
+INFO 01-08-20 13:06:22   Train accuracy: 100.00%
+INFO 01-08-20 13:06:22 > Stored test predictions to results/run-3/profile-run-3/responsory/full/pitch-test-pred.txt
+INFO 01-08-20 13:06:22   md5 checksum: 2f74deccae4999720a74d6c3f36ccf9d
+INFO 01-08-20 13:06:22   Test accuracy: 87.91%
+INFO 01-08-20 13:06:22 > Done.
+INFO 01-08-20 13:06:22 ************************************************************
+INFO 01-08-20 13:06:22 Training model...
+INFO 01-08-20 13:06:22 * profile=pitch_class
+INFO 01-08-20 13:06:22 * genre=responsory
+INFO 01-08-20 13:06:22 * subset=full
+INFO 01-08-20 13:06:22 * Training/test size: 4922/2109
+INFO 01-08-20 13:06:22 * Num. features: 12
+INFO 01-08-20 13:06:22 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 13:06:22   Tune using randomized search (n_iter=100, random_state=3)
+INFO 01-08-20 13:06:22   Tuned params: ['n_neighbors', 'weights', 'algorithm', 'leaf_size']
+INFO 01-08-20 13:10:40   Best params: {'weights': 'uniform', 'n_neighbors': 18, 'leaf_size': 83, 'algorithm': 'ball_tree'}
+INFO 01-08-20 13:10:40   Mean cross validation statistics for best params:
+INFO 01-08-20 13:10:40   - Train/test accuracy: 85.78%%/82.26%% (rank 1)
+INFO 01-08-20 13:10:40   - Train/test precision: 85.80%%/82.42%% (rank 1)
+INFO 01-08-20 13:10:40   - Train/test recall: 85.78%%/82.26%% (rank 1)
+INFO 01-08-20 13:10:40   - Train/test f1: 85.69%%/82.09%% (rank 4)
+INFO 01-08-20 13:10:40   Setting model parameters to highest-accuracy params
+INFO 01-08-20 13:10:40   Tuning done in 257.51s
+INFO 01-08-20 13:10:40 > Training done in 0.01s
+INFO 01-08-20 13:10:40 > Serialized model to results/run-3/profile-run-3/responsory/full/pitch_class.model
+INFO 01-08-20 13:10:40   md5 checksum: 2460fbf3405aa33e936cfcc8b4635503
+INFO 01-08-20 13:10:40 > Stored tuning results to results/run-3/profile-run-3/responsory/full/pitch_class-tuning.csv
+INFO 01-08-20 13:10:40   md5 checksum: 74ce6dae2a21b104501ef9322b642f5c
+INFO 01-08-20 13:10:41 > Stored train predictions to results/run-3/profile-run-3/responsory/full/pitch_class-train-pred.txt
+INFO 01-08-20 13:10:41   md5 checksum: 275bd5f007b806d7ed77008c7637a379
+INFO 01-08-20 13:10:41   Train accuracy: 86.18%
+INFO 01-08-20 13:10:41 > Stored test predictions to results/run-3/profile-run-3/responsory/full/pitch_class-test-pred.txt
+INFO 01-08-20 13:10:41   md5 checksum: c12077a328db4d9e977074bf3576bce7
+INFO 01-08-20 13:10:42   Test accuracy: 85.54%
+INFO 01-08-20 13:10:42 > Done.
+INFO 01-08-20 13:10:42 ************************************************************
+INFO 01-08-20 13:10:42 Training model...
+INFO 01-08-20 13:10:42 * profile=repetition
+INFO 01-08-20 13:10:42 * genre=responsory
+INFO 01-08-20 13:10:42 * subset=full
+INFO 01-08-20 13:10:42 * Training/test size: 4922/2109
+INFO 01-08-20 13:10:42 * Num. features: 34
+INFO 01-08-20 13:10:42 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 13:10:42   Tune using randomized search (n_iter=100, random_state=56)
+INFO 01-08-20 13:10:42   Tuned params: ['n_neighbors', 'weights', 'algorithm', 'leaf_size']
+INFO 01-08-20 13:16:22   Best params: {'weights': 'distance', 'n_neighbors': 33, 'leaf_size': 63, 'algorithm': 'brute'}
+INFO 01-08-20 13:16:22   Mean cross validation statistics for best params:
+INFO 01-08-20 13:16:22   - Train/test accuracy: 99.98%%/77.06%% (rank 1)
+INFO 01-08-20 13:16:22   - Train/test precision: 99.98%%/76.70%% (rank 1)
+INFO 01-08-20 13:16:22   - Train/test recall: 99.98%%/77.06%% (rank 1)
+INFO 01-08-20 13:16:22   - Train/test f1: 99.98%%/76.04%% (rank 8)
+INFO 01-08-20 13:16:22   Setting model parameters to highest-accuracy params
+INFO 01-08-20 13:16:22   Tuning done in 340.35s
+INFO 01-08-20 13:16:22 > Training done in 0.00s
+INFO 01-08-20 13:16:22 > Serialized model to results/run-3/profile-run-3/responsory/full/repetition.model
+INFO 01-08-20 13:16:22   md5 checksum: 7a3420a92c87f3839c0ded282c3afc1a
+INFO 01-08-20 13:16:22 > Stored tuning results to results/run-3/profile-run-3/responsory/full/repetition-tuning.csv
+INFO 01-08-20 13:16:22   md5 checksum: db17144c71a33d62e5707b057899dd9a
+INFO 01-08-20 13:16:24 > Stored train predictions to results/run-3/profile-run-3/responsory/full/repetition-train-pred.txt
+INFO 01-08-20 13:16:24   md5 checksum: 8d4417a9ef40a855bd58176d1fc56f32
+INFO 01-08-20 13:16:24   Train accuracy: 99.98%
+INFO 01-08-20 13:16:25 > Stored test predictions to results/run-3/profile-run-3/responsory/full/repetition-test-pred.txt
+INFO 01-08-20 13:16:25   md5 checksum: e81afbc20a177a76cce5fcfc6591e6c1
+INFO 01-08-20 13:16:25   Test accuracy: 83.26%
+INFO 01-08-20 13:16:25 > Done.
+INFO 01-08-20 13:16:25 ************************************************************
+INFO 01-08-20 13:16:25 Training model...
+INFO 01-08-20 13:16:25 * profile=pitch
+INFO 01-08-20 13:16:25 * genre=responsory
+INFO 01-08-20 13:16:25 * subset=subset
+INFO 01-08-20 13:16:25 * Training/test size: 1234/529
+INFO 01-08-20 13:16:25 * Num. features: 34
+INFO 01-08-20 13:16:25 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 13:16:25   Tune using randomized search (n_iter=100, random_state=72)
+INFO 01-08-20 13:16:25   Tuned params: ['n_neighbors', 'weights', 'algorithm', 'leaf_size']
+INFO 01-08-20 13:17:10   Best params: {'weights': 'uniform', 'n_neighbors': 4, 'leaf_size': 55, 'algorithm': 'brute'}
+INFO 01-08-20 13:17:10   Mean cross validation statistics for best params:
+INFO 01-08-20 13:17:10   - Train/test accuracy: 85.11%%/79.66%% (rank 1)
+INFO 01-08-20 13:17:10   - Train/test precision: 85.32%%/80.12%% (rank 1)
+INFO 01-08-20 13:17:10   - Train/test recall: 85.11%%/79.66%% (rank 1)
+INFO 01-08-20 13:17:10   - Train/test f1: 85.05%%/79.56%% (rank 1)
+INFO 01-08-20 13:17:10   Setting model parameters to highest-accuracy params
+INFO 01-08-20 13:17:10   Tuning done in 45.51s
+INFO 01-08-20 13:17:10 > Training done in 0.00s
+INFO 01-08-20 13:17:10 > Serialized model to results/run-3/profile-run-3/responsory/subset/pitch.model
+INFO 01-08-20 13:17:10   md5 checksum: 6cb8a8e1ade8d19dbaa842846cafd48d
+INFO 01-08-20 13:17:11 > Stored tuning results to results/run-3/profile-run-3/responsory/subset/pitch-tuning.csv
+INFO 01-08-20 13:17:11   md5 checksum: d8ef91064588261e1fbecdd0212dd764
+INFO 01-08-20 13:17:11 > Stored train predictions to results/run-3/profile-run-3/responsory/subset/pitch-train-pred.txt
+INFO 01-08-20 13:17:11   md5 checksum: 699fdbc0b232c597fa1680267c92cad4
+INFO 01-08-20 13:17:11   Train accuracy: 85.66%
+INFO 01-08-20 13:17:11 > Stored test predictions to results/run-3/profile-run-3/responsory/subset/pitch-test-pred.txt
+INFO 01-08-20 13:17:11   md5 checksum: 0b990874d8a2abe6c102b1d57ec72542
+INFO 01-08-20 13:17:11   Test accuracy: 77.50%
+INFO 01-08-20 13:17:11 > Done.
+INFO 01-08-20 13:17:11 ************************************************************
+INFO 01-08-20 13:17:11 Training model...
+INFO 01-08-20 13:17:11 * profile=pitch_class
+INFO 01-08-20 13:17:11 * genre=responsory
+INFO 01-08-20 13:17:11 * subset=subset
+INFO 01-08-20 13:17:11 * Training/test size: 1234/529
+INFO 01-08-20 13:17:11 * Num. features: 12
+INFO 01-08-20 13:17:11 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 13:17:11   Tune using randomized search (n_iter=100, random_state=0)
+INFO 01-08-20 13:17:11   Tuned params: ['n_neighbors', 'weights', 'algorithm', 'leaf_size']
+INFO 01-08-20 13:17:56   Best params: {'weights': 'distance', 'n_neighbors': 13, 'leaf_size': 37, 'algorithm': 'kd_tree'}
+INFO 01-08-20 13:17:56   Mean cross validation statistics for best params:
+INFO 01-08-20 13:17:56   - Train/test accuracy: 100.00%%/77.88%% (rank 1)
+INFO 01-08-20 13:17:56   - Train/test precision: 100.00%%/78.05%% (rank 2)
+INFO 01-08-20 13:17:56   - Train/test recall: 100.00%%/77.88%% (rank 1)
+INFO 01-08-20 13:17:56   - Train/test f1: 100.00%%/77.61%% (rank 3)
+INFO 01-08-20 13:17:56   Setting model parameters to highest-accuracy params
+INFO 01-08-20 13:17:56   Tuning done in 44.85s
+INFO 01-08-20 13:17:56 > Training done in 0.00s
+INFO 01-08-20 13:17:56 > Serialized model to results/run-3/profile-run-3/responsory/subset/pitch_class.model
+INFO 01-08-20 13:17:56   md5 checksum: e35266071548872ca22a115074f4e7c5
+INFO 01-08-20 13:17:56 > Stored tuning results to results/run-3/profile-run-3/responsory/subset/pitch_class-tuning.csv
+INFO 01-08-20 13:17:56   md5 checksum: fbf09aa5b6b01e6f172a2ebf7ea16754
+INFO 01-08-20 13:17:56 > Stored train predictions to results/run-3/profile-run-3/responsory/subset/pitch_class-train-pred.txt
+INFO 01-08-20 13:17:56   md5 checksum: eb9e9957ec2e28b1a90d5bb9c1974777
+INFO 01-08-20 13:17:56   Train accuracy: 100.00%
+INFO 01-08-20 13:17:56 > Stored test predictions to results/run-3/profile-run-3/responsory/subset/pitch_class-test-pred.txt
+INFO 01-08-20 13:17:56   md5 checksum: 3b16b690a7e112f609e17a6418429cf7
+INFO 01-08-20 13:17:56   Test accuracy: 78.45%
+INFO 01-08-20 13:17:56 > Done.
+INFO 01-08-20 13:17:56 ************************************************************
+INFO 01-08-20 13:17:56 Training model...
+INFO 01-08-20 13:17:56 * profile=repetition
+INFO 01-08-20 13:17:56 * genre=responsory
+INFO 01-08-20 13:17:56 * subset=subset
+INFO 01-08-20 13:17:56 * Training/test size: 1234/529
+INFO 01-08-20 13:17:56 * Num. features: 34
+INFO 01-08-20 13:17:56 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 13:17:56   Tune using randomized search (n_iter=100, random_state=21)
+INFO 01-08-20 13:17:56   Tuned params: ['n_neighbors', 'weights', 'algorithm', 'leaf_size']
+INFO 01-08-20 13:18:45   Best params: {'weights': 'uniform', 'n_neighbors': 11, 'leaf_size': 70, 'algorithm': 'kd_tree'}
+INFO 01-08-20 13:18:45   Mean cross validation statistics for best params:
+INFO 01-08-20 13:18:45   - Train/test accuracy: 76.56%%/73.34%% (rank 1)
+INFO 01-08-20 13:18:45   - Train/test precision: 76.70%%/73.29%% (rank 1)
+INFO 01-08-20 13:18:45   - Train/test recall: 76.56%%/73.34%% (rank 1)
+INFO 01-08-20 13:18:45   - Train/test f1: 75.94%%/72.52%% (rank 1)
+INFO 01-08-20 13:18:45   Setting model parameters to highest-accuracy params
+INFO 01-08-20 13:18:45   Tuning done in 48.68s
+INFO 01-08-20 13:18:45 > Training done in 0.00s
+INFO 01-08-20 13:18:45 > Serialized model to results/run-3/profile-run-3/responsory/subset/repetition.model
+INFO 01-08-20 13:18:45   md5 checksum: 0498565aacb8e212beb0cbb3e1ed01a8
+INFO 01-08-20 13:18:45 > Stored tuning results to results/run-3/profile-run-3/responsory/subset/repetition-tuning.csv
+INFO 01-08-20 13:18:45   md5 checksum: d3ab98d1cdddfa3f8af8725b060c7522
+INFO 01-08-20 13:18:45 > Stored train predictions to results/run-3/profile-run-3/responsory/subset/repetition-train-pred.txt
+INFO 01-08-20 13:18:45   md5 checksum: afb3296fe79a5e4ec80436cfe3b829e7
+INFO 01-08-20 13:18:45   Train accuracy: 76.74%
+INFO 01-08-20 13:18:46 > Stored test predictions to results/run-3/profile-run-3/responsory/subset/repetition-test-pred.txt
+INFO 01-08-20 13:18:46   md5 checksum: 467ae98bb5a9c532c79efa037b2bc62e
+INFO 01-08-20 13:18:46   Test accuracy: 71.27%
+INFO 01-08-20 13:18:46 > Done.
+INFO 01-08-20 13:18:46 ************************************************************
+INFO 01-08-20 13:18:46 Training model...
+INFO 01-08-20 13:18:46 * profile=pitch
+INFO 01-08-20 13:18:46 * genre=antiphon
+INFO 01-08-20 13:18:46 * subset=full
+INFO 01-08-20 13:18:46 * Training/test size: 9706/4159
+INFO 01-08-20 13:18:46 * Num. features: 34
+INFO 01-08-20 13:18:46 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 13:18:46   Tune using randomized search (n_iter=100, random_state=19)
+INFO 01-08-20 13:18:46   Tuned params: ['n_neighbors', 'weights', 'algorithm', 'leaf_size']
+INFO 01-08-20 13:39:52   Best params: {'weights': 'distance', 'n_neighbors': 18, 'leaf_size': 33, 'algorithm': 'kd_tree'}
+INFO 01-08-20 13:39:52   Mean cross validation statistics for best params:
+INFO 01-08-20 13:39:52   - Train/test accuracy: 99.99%%/88.82%% (rank 1)
+INFO 01-08-20 13:39:52   - Train/test precision: 99.99%%/88.97%% (rank 1)
+INFO 01-08-20 13:39:52   - Train/test recall: 99.99%%/88.82%% (rank 1)
+INFO 01-08-20 13:39:52   - Train/test f1: 99.99%%/88.72%% (rank 1)
+INFO 01-08-20 13:39:52   Setting model parameters to highest-accuracy params
+INFO 01-08-20 13:39:52   Tuning done in 1266.24s
+INFO 01-08-20 13:39:52 > Training done in 0.04s
+INFO 01-08-20 13:39:53 > Serialized model to results/run-3/profile-run-3/antiphon/full/pitch.model
+INFO 01-08-20 13:39:53   md5 checksum: 0d5be77223ee396cc8c54e02c63e1bc0
+INFO 01-08-20 13:39:53 > Stored tuning results to results/run-3/profile-run-3/antiphon/full/pitch-tuning.csv
+INFO 01-08-20 13:39:53   md5 checksum: e3bf10079a1794b6b76f08be7cdfef3d
+INFO 01-08-20 13:39:53 > Stored train predictions to results/run-3/profile-run-3/antiphon/full/pitch-train-pred.txt
+INFO 01-08-20 13:39:53   md5 checksum: 59971334446ca6cb401e0dd47a4520ab
+INFO 01-08-20 13:39:53   Train accuracy: 99.99%
+INFO 01-08-20 13:39:54 > Stored test predictions to results/run-3/profile-run-3/antiphon/full/pitch-test-pred.txt
+INFO 01-08-20 13:39:54   md5 checksum: 6df18295fa5dc59b927de0066d3fc39d
+INFO 01-08-20 13:39:54   Test accuracy: 89.76%
+INFO 01-08-20 13:39:54 > Done.
+INFO 01-08-20 13:39:54 ************************************************************
+INFO 01-08-20 13:39:54 Training model...
+INFO 01-08-20 13:39:54 * profile=pitch_class
+INFO 01-08-20 13:39:54 * genre=antiphon
+INFO 01-08-20 13:39:54 * subset=full
+INFO 01-08-20 13:39:54 * Training/test size: 9706/4159
+INFO 01-08-20 13:39:54 * Num. features: 12
+INFO 01-08-20 13:39:54 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 13:39:54   Tune using randomized search (n_iter=100, random_state=74)
+INFO 01-08-20 13:39:54   Tuned params: ['n_neighbors', 'weights', 'algorithm', 'leaf_size']
+INFO 01-08-20 13:53:23   Best params: {'weights': 'distance', 'n_neighbors': 18, 'leaf_size': 50, 'algorithm': 'brute'}
+INFO 01-08-20 13:53:23   Mean cross validation statistics for best params:
+INFO 01-08-20 13:53:23   - Train/test accuracy: 99.99%%/87.84%% (rank 1)
+INFO 01-08-20 13:53:23   - Train/test precision: 99.99%%/87.96%% (rank 1)
+INFO 01-08-20 13:53:23   - Train/test recall: 99.99%%/87.84%% (rank 1)
+INFO 01-08-20 13:53:23   - Train/test f1: 99.99%%/87.72%% (rank 1)
+INFO 01-08-20 13:53:23   Setting model parameters to highest-accuracy params
+INFO 01-08-20 13:53:23   Tuning done in 808.54s
+INFO 01-08-20 13:53:23 > Training done in 0.01s
+INFO 01-08-20 13:53:23 > Serialized model to results/run-3/profile-run-3/antiphon/full/pitch_class.model
+INFO 01-08-20 13:53:23   md5 checksum: c1e3d84de0a32388e191e383932f9074
+INFO 01-08-20 13:53:23 > Stored tuning results to results/run-3/profile-run-3/antiphon/full/pitch_class-tuning.csv
+INFO 01-08-20 13:53:23   md5 checksum: 742aa85e224dee3b82e53ce46001edca
+INFO 01-08-20 13:53:29 > Stored train predictions to results/run-3/profile-run-3/antiphon/full/pitch_class-train-pred.txt
+INFO 01-08-20 13:53:29   md5 checksum: 59971334446ca6cb401e0dd47a4520ab
+INFO 01-08-20 13:53:29   Train accuracy: 99.99%
+INFO 01-08-20 13:53:31 > Stored test predictions to results/run-3/profile-run-3/antiphon/full/pitch_class-test-pred.txt
+INFO 01-08-20 13:53:31   md5 checksum: 3b86d50602f92cf6d634c70ef7e315b7
+INFO 01-08-20 13:53:31   Test accuracy: 88.68%
+INFO 01-08-20 13:53:31 > Done.
+INFO 01-08-20 13:53:31 ************************************************************
+INFO 01-08-20 13:53:31 Training model...
+INFO 01-08-20 13:53:31 * profile=repetition
+INFO 01-08-20 13:53:31 * genre=antiphon
+INFO 01-08-20 13:53:31 * subset=full
+INFO 01-08-20 13:53:32 * Training/test size: 9706/4159
+INFO 01-08-20 13:53:32 * Num. features: 34
+INFO 01-08-20 13:53:32 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 13:53:32   Tune using randomized search (n_iter=100, random_state=41)
+INFO 01-08-20 13:53:32   Tuned params: ['n_neighbors', 'weights', 'algorithm', 'leaf_size']
+INFO 01-08-20 14:13:10   Best params: {'weights': 'uniform', 'n_neighbors': 12, 'leaf_size': 60, 'algorithm': 'ball_tree'}
+INFO 01-08-20 14:13:10   Mean cross validation statistics for best params:
+INFO 01-08-20 14:13:10   - Train/test accuracy: 86.27%%/82.99%% (rank 1)
+INFO 01-08-20 14:13:10   - Train/test precision: 86.37%%/83.15%% (rank 1)
+INFO 01-08-20 14:13:10   - Train/test recall: 86.27%%/82.99%% (rank 1)
+INFO 01-08-20 14:13:10   - Train/test f1: 86.10%%/82.70%% (rank 1)
+INFO 01-08-20 14:13:10   Setting model parameters to highest-accuracy params
+INFO 01-08-20 14:13:10   Tuning done in 1178.81s
+INFO 01-08-20 14:13:10 > Training done in 0.04s
+INFO 01-08-20 14:13:11 > Serialized model to results/run-3/profile-run-3/antiphon/full/repetition.model
+INFO 01-08-20 14:13:11   md5 checksum: 3fe6632a2f7a91e50dba1fac2a4e287e
+INFO 01-08-20 14:13:11 > Stored tuning results to results/run-3/profile-run-3/antiphon/full/repetition-tuning.csv
+INFO 01-08-20 14:13:11   md5 checksum: 261bd96509a1e0445dce9f0ca55c7bb5
+INFO 01-08-20 14:13:14 > Stored train predictions to results/run-3/profile-run-3/antiphon/full/repetition-train-pred.txt
+INFO 01-08-20 14:13:14   md5 checksum: 44941d23cb20ba8deed2cb47b0244bee
+INFO 01-08-20 14:13:14   Train accuracy: 86.46%
+INFO 01-08-20 14:13:15 > Stored test predictions to results/run-3/profile-run-3/antiphon/full/repetition-test-pred.txt
+INFO 01-08-20 14:13:15   md5 checksum: 501182b560d7fb4a3216d3c54785027b
+INFO 01-08-20 14:13:15   Test accuracy: 84.64%
+INFO 01-08-20 14:13:15 > Done.
+INFO 01-08-20 14:13:15 ************************************************************
+INFO 01-08-20 14:13:15 Training model...
+INFO 01-08-20 14:13:15 * profile=pitch
+INFO 01-08-20 14:13:15 * genre=antiphon
+INFO 01-08-20 14:13:15 * subset=subset
+INFO 01-08-20 14:13:16 * Training/test size: 2911/1248
+INFO 01-08-20 14:13:16 * Num. features: 34
+INFO 01-08-20 14:13:16 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 14:13:16   Tune using randomized search (n_iter=100, random_state=10)
+INFO 01-08-20 14:13:16   Tuned params: ['n_neighbors', 'weights', 'algorithm', 'leaf_size']
+INFO 01-08-20 14:15:24   Best params: {'weights': 'uniform', 'n_neighbors': 22, 'leaf_size': 24, 'algorithm': 'kd_tree'}
+INFO 01-08-20 14:15:24   Mean cross validation statistics for best params:
+INFO 01-08-20 14:15:24   - Train/test accuracy: 86.85%%/86.16%% (rank 1)
+INFO 01-08-20 14:15:24   - Train/test precision: 86.97%%/86.38%% (rank 1)
+INFO 01-08-20 14:15:24   - Train/test recall: 86.85%%/86.16%% (rank 1)
+INFO 01-08-20 14:15:24   - Train/test f1: 86.80%%/86.08%% (rank 1)
+INFO 01-08-20 14:15:24   Setting model parameters to highest-accuracy params
+INFO 01-08-20 14:15:24   Tuning done in 128.34s
+INFO 01-08-20 14:15:24 > Training done in 0.01s
+INFO 01-08-20 14:15:24 > Serialized model to results/run-3/profile-run-3/antiphon/subset/pitch.model
+INFO 01-08-20 14:15:24   md5 checksum: 14f0d56df50eedceaebd2b6e64ff4fa8
+INFO 01-08-20 14:15:24 > Stored tuning results to results/run-3/profile-run-3/antiphon/subset/pitch-tuning.csv
+INFO 01-08-20 14:15:24   md5 checksum: 2a2fb4a153259041a5447c0e28cc1c62
+INFO 01-08-20 14:15:24 > Stored train predictions to results/run-3/profile-run-3/antiphon/subset/pitch-train-pred.txt
+INFO 01-08-20 14:15:24   md5 checksum: 616524946c5fb987d33183f5208da375
+INFO 01-08-20 14:15:24   Train accuracy: 86.95%
+INFO 01-08-20 14:15:25 > Stored test predictions to results/run-3/profile-run-3/antiphon/subset/pitch-test-pred.txt
+INFO 01-08-20 14:15:25   md5 checksum: 46b5c72a5f2b31b8af54e8817491ca09
+INFO 01-08-20 14:15:25   Test accuracy: 85.18%
+INFO 01-08-20 14:15:25 > Done.
+INFO 01-08-20 14:15:25 ************************************************************
+INFO 01-08-20 14:15:25 Training model...
+INFO 01-08-20 14:15:25 * profile=pitch_class
+INFO 01-08-20 14:15:25 * genre=antiphon
+INFO 01-08-20 14:15:25 * subset=subset
+INFO 01-08-20 14:15:25 * Training/test size: 2911/1248
+INFO 01-08-20 14:15:25 * Num. features: 12
+INFO 01-08-20 14:15:25 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 14:15:25   Tune using randomized search (n_iter=100, random_state=21)
+INFO 01-08-20 14:15:25   Tuned params: ['n_neighbors', 'weights', 'algorithm', 'leaf_size']
+INFO 01-08-20 14:16:54   Best params: {'weights': 'distance', 'n_neighbors': 30, 'leaf_size': 21, 'algorithm': 'kd_tree'}
+INFO 01-08-20 14:16:54   Mean cross validation statistics for best params:
+INFO 01-08-20 14:16:54   - Train/test accuracy: 100.00%%/84.85%% (rank 1)
+INFO 01-08-20 14:16:54   - Train/test precision: 100.00%%/85.02%% (rank 3)
+INFO 01-08-20 14:16:54   - Train/test recall: 100.00%%/84.85%% (rank 1)
+INFO 01-08-20 14:16:54   - Train/test f1: 100.00%%/84.76%% (rank 1)
+INFO 01-08-20 14:16:54   Setting model parameters to highest-accuracy params
+INFO 01-08-20 14:16:54   Tuning done in 89.23s
+INFO 01-08-20 14:16:54 > Training done in 0.00s
+INFO 01-08-20 14:16:54 > Serialized model to results/run-3/profile-run-3/antiphon/subset/pitch_class.model
+INFO 01-08-20 14:16:54   md5 checksum: c11db7ae51eafefe8137176ac85f6e60
+INFO 01-08-20 14:16:54 > Stored tuning results to results/run-3/profile-run-3/antiphon/subset/pitch_class-tuning.csv
+INFO 01-08-20 14:16:54   md5 checksum: 87c828b46e59656ca9e845e55776a24a
+INFO 01-08-20 14:16:54 > Stored train predictions to results/run-3/profile-run-3/antiphon/subset/pitch_class-train-pred.txt
+INFO 01-08-20 14:16:54   md5 checksum: 9231d47b2732c57313fe3a0b5aeabed9
+INFO 01-08-20 14:16:54   Train accuracy: 100.00%
+INFO 01-08-20 14:16:55 > Stored test predictions to results/run-3/profile-run-3/antiphon/subset/pitch_class-test-pred.txt
+INFO 01-08-20 14:16:55   md5 checksum: 28eb3083a1f66e4dac92cb4593695f08
+INFO 01-08-20 14:16:55   Test accuracy: 83.89%
+INFO 01-08-20 14:16:55 > Done.
+INFO 01-08-20 14:16:55 ************************************************************
+INFO 01-08-20 14:16:55 Training model...
+INFO 01-08-20 14:16:55 * profile=repetition
+INFO 01-08-20 14:16:55 * genre=antiphon
+INFO 01-08-20 14:16:55 * subset=subset
+INFO 01-08-20 14:16:55 * Training/test size: 2911/1248
+INFO 01-08-20 14:16:55 * Num. features: 34
+INFO 01-08-20 14:16:55 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 14:16:55   Tune using randomized search (n_iter=100, random_state=38)
+INFO 01-08-20 14:16:55   Tuned params: ['n_neighbors', 'weights', 'algorithm', 'leaf_size']
+INFO 01-08-20 14:18:36   Best params: {'weights': 'distance', 'n_neighbors': 11, 'leaf_size': 11, 'algorithm': 'kd_tree'}
+INFO 01-08-20 14:18:36   Mean cross validation statistics for best params:
+INFO 01-08-20 14:18:36   - Train/test accuracy: 99.91%%/80.25%% (rank 1)
+INFO 01-08-20 14:18:36   - Train/test precision: 99.91%%/80.56%% (rank 1)
+INFO 01-08-20 14:18:36   - Train/test recall: 99.91%%/80.25%% (rank 1)
+INFO 01-08-20 14:18:36   - Train/test f1: 99.91%%/80.08%% (rank 1)
+INFO 01-08-20 14:18:36   Setting model parameters to highest-accuracy params
+INFO 01-08-20 14:18:36   Tuning done in 101.41s
+INFO 01-08-20 14:18:36 > Training done in 0.01s
+INFO 01-08-20 14:18:36 > Serialized model to results/run-3/profile-run-3/antiphon/subset/repetition.model
+INFO 01-08-20 14:18:36   md5 checksum: 24f2556149192af1ec98c7dfbe3bb796
+INFO 01-08-20 14:18:36 > Stored tuning results to results/run-3/profile-run-3/antiphon/subset/repetition-tuning.csv
+INFO 01-08-20 14:18:36   md5 checksum: e6e9b986b1eb6b4db48d73844423ebf7
+INFO 01-08-20 14:18:36 > Stored train predictions to results/run-3/profile-run-3/antiphon/subset/repetition-train-pred.txt
+INFO 01-08-20 14:18:36   md5 checksum: 44d92f5da0fc6eb9fc10a58084698b1e
+INFO 01-08-20 14:18:36   Train accuracy: 99.90%
+INFO 01-08-20 14:18:37 > Stored test predictions to results/run-3/profile-run-3/antiphon/subset/repetition-test-pred.txt
+INFO 01-08-20 14:18:37   md5 checksum: 877f3c2eabc93ad1f9888928e55d14bf
+INFO 01-08-20 14:18:37   Test accuracy: 79.25%
+INFO 01-08-20 14:18:37 > Done.
+INFO 01-08-20 14:18:37 ************************************************************
+INFO 01-08-20 14:18:37 Evaluating experiment...
+INFO 01-08-20 14:18:38 > Stored scores to results/run-3/profile-run-3/profile-run-3-scores.csv

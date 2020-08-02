@@ -1,0 +1,857 @@
+INFO 01-08-20 04:42:47 ************************************************************
+INFO 01-08-20 04:42:47 * Experiment: traditional-run-0
+INFO 01-08-20 04:42:47 * Description:
+INFO 01-08-20 04:42:47 *   The complete 'traditional' classification
+INFO 01-08-20 04:42:47 *   experiment: mode classification  based on the
+INFO 01-08-20 04:42:47 *   final, ambitus and initial, in all possible
+INFO 01-08-20 04:42:47 *   combinations.
+INFO 01-08-20 04:42:47 * data_dir: data/run-0
+INFO 01-08-20 04:42:47 * n_iter: 20
+INFO 01-08-20 04:42:47 * n_splits: 5
+INFO 01-08-20 04:42:47 * num_conditions: 28
+INFO 01-08-20 04:42:47 * subsets: ['full', 'subset']
+INFO 01-08-20 04:42:47 * genres: ['responsory', 'antiphon']
+INFO 01-08-20 04:42:47 * feature_sets: ['final', 'ambitus', 'initial', 'final-ambitus', 'final-initial', 'final-ambitus-initial', 'ambitus-initial']
+INFO 01-08-20 04:42:47 ************************************************************
+INFO 01-08-20 04:42:47 Training model...
+INFO 01-08-20 04:42:47 * feature_set=final
+INFO 01-08-20 04:42:47 * genre=responsory
+INFO 01-08-20 04:42:47 * subset=full
+INFO 01-08-20 04:42:48 * Training/test size: 4922/2109
+INFO 01-08-20 04:42:48 * Num. features: 1
+INFO 01-08-20 04:42:48 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 04:42:48   Tune using randomized search (n_iter=20, random_state=47)
+INFO 01-08-20 04:42:48   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 04:44:34   Best params: {'n_estimators': 676, 'max_samples': 0.5909090909090909, 'max_features': 0.6464646464646465, 'max_depth': 778, 'criterion': 'entropy', 'bootstrap': False}
+INFO 01-08-20 04:44:34   Mean cross validation statistics for best params:
+INFO 01-08-20 04:44:34   - Train/test accuracy: 53.88%%/53.68%% (rank 1)
+INFO 01-08-20 04:44:34   - Train/test precision: 50.86%%/41.60%% (rank 1)
+INFO 01-08-20 04:44:34   - Train/test recall: 53.88%%/53.68%% (rank 1)
+INFO 01-08-20 04:44:34   - Train/test f1: 39.14%%/38.79%% (rank 1)
+INFO 01-08-20 04:44:34   Setting model parameters to highest-accuracy params
+INFO 01-08-20 04:44:34   Tuning done in 106.23s
+INFO 01-08-20 04:44:38 > Training done in 4.36s
+INFO 01-08-20 04:44:38 > Serialized model to results/run-0/traditional-run-0/responsory/full/final.model
+INFO 01-08-20 04:44:38   md5 checksum: ea8aaa270aedad430af65d86e57fb017
+INFO 01-08-20 04:44:38 > Stored tuning results to results/run-0/traditional-run-0/responsory/full/final-tuning.csv
+INFO 01-08-20 04:44:38   md5 checksum: 4f72c624887cb28537c92cb54647367f
+INFO 01-08-20 04:44:39 > Stored train predictions to results/run-0/traditional-run-0/responsory/full/final-train-pred.txt
+INFO 01-08-20 04:44:39   md5 checksum: b402a1512e280aa87d91e44740d4f16e
+INFO 01-08-20 04:44:39   Train accuracy: 53.86%
+INFO 01-08-20 04:44:40 > Stored test predictions to results/run-0/traditional-run-0/responsory/full/final-test-pred.txt
+INFO 01-08-20 04:44:40   md5 checksum: 4d23e1481fd58c2e0a08c7fc1d8f1b46
+INFO 01-08-20 04:44:40   Test accuracy: 55.67%
+INFO 01-08-20 04:44:40 > Done.
+INFO 01-08-20 04:44:40 ************************************************************
+INFO 01-08-20 04:44:40 Training model...
+INFO 01-08-20 04:44:40 * feature_set=ambitus
+INFO 01-08-20 04:44:40 * genre=responsory
+INFO 01-08-20 04:44:40 * subset=full
+INFO 01-08-20 04:44:41 * Training/test size: 4922/2109
+INFO 01-08-20 04:44:41 * Num. features: 2
+INFO 01-08-20 04:44:41 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 04:44:41   Tune using randomized search (n_iter=20, random_state=67)
+INFO 01-08-20 04:44:41   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 04:48:09   Best params: {'n_estimators': 935, 'max_samples': 0.7828282828282829, 'max_features': 0.04040404040404041, 'max_depth': 489, 'criterion': 'gini', 'bootstrap': False}
+INFO 01-08-20 04:48:09   Mean cross validation statistics for best params:
+INFO 01-08-20 04:48:09   - Train/test accuracy: 61.07%%/58.39%% (rank 1)
+INFO 01-08-20 04:48:09   - Train/test precision: 61.32%%/54.11%% (rank 1)
+INFO 01-08-20 04:48:09   - Train/test recall: 61.07%%/58.39%% (rank 1)
+INFO 01-08-20 04:48:09   - Train/test f1: 57.97%%/55.04%% (rank 1)
+INFO 01-08-20 04:48:09   Setting model parameters to highest-accuracy params
+INFO 01-08-20 04:48:09   Tuning done in 208.69s
+INFO 01-08-20 04:48:16 > Training done in 6.71s
+INFO 01-08-20 04:48:34 > Serialized model to results/run-0/traditional-run-0/responsory/full/ambitus.model
+INFO 01-08-20 04:48:34   md5 checksum: df4075143725f0023c814ef8796e7e2c
+INFO 01-08-20 04:48:34 > Stored tuning results to results/run-0/traditional-run-0/responsory/full/ambitus-tuning.csv
+INFO 01-08-20 04:48:34   md5 checksum: 8a05b7d5e2cdaf476143f641d3ae8a1b
+INFO 01-08-20 04:48:36 > Stored train predictions to results/run-0/traditional-run-0/responsory/full/ambitus-train-pred.txt
+INFO 01-08-20 04:48:36   md5 checksum: 10aa3b4c075d8ae6ebaf74088046d628
+INFO 01-08-20 04:48:36   Train accuracy: 60.81%
+INFO 01-08-20 04:48:36 > Stored test predictions to results/run-0/traditional-run-0/responsory/full/ambitus-test-pred.txt
+INFO 01-08-20 04:48:36   md5 checksum: 6620f59542f05a0662661f6659e27c88
+INFO 01-08-20 04:48:36   Test accuracy: 57.75%
+INFO 01-08-20 04:48:36 > Done.
+INFO 01-08-20 04:48:36 ************************************************************
+INFO 01-08-20 04:48:36 Training model...
+INFO 01-08-20 04:48:36 * feature_set=initial
+INFO 01-08-20 04:48:36 * genre=responsory
+INFO 01-08-20 04:48:36 * subset=full
+INFO 01-08-20 04:48:38 * Training/test size: 4922/2109
+INFO 01-08-20 04:48:38 * Num. features: 1
+INFO 01-08-20 04:48:38 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 04:48:38   Tune using randomized search (n_iter=20, random_state=9)
+INFO 01-08-20 04:48:38   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 04:51:29   Best params: {'n_estimators': 255, 'max_samples': 0.9646464646464648, 'max_features': 0.08080808080808081, 'max_depth': 734, 'criterion': 'entropy', 'bootstrap': True}
+INFO 01-08-20 04:51:29   Mean cross validation statistics for best params:
+INFO 01-08-20 04:51:29   - Train/test accuracy: 47.15%%/46.95%% (rank 1)
+INFO 01-08-20 04:51:29   - Train/test precision: 41.14%%/38.62%% (rank 5)
+INFO 01-08-20 04:51:29   - Train/test recall: 47.15%%/46.95%% (rank 1)
+INFO 01-08-20 04:51:29   - Train/test f1: 38.19%%/37.86%% (rank 1)
+INFO 01-08-20 04:51:29   Setting model parameters to highest-accuracy params
+INFO 01-08-20 04:51:29   Tuning done in 171.09s
+INFO 01-08-20 04:51:30 > Training done in 1.65s
+INFO 01-08-20 04:51:32 > Serialized model to results/run-0/traditional-run-0/responsory/full/initial.model
+INFO 01-08-20 04:51:32   md5 checksum: fa57d872c33896f983a9f35d03dc3b63
+INFO 01-08-20 04:51:32 > Stored tuning results to results/run-0/traditional-run-0/responsory/full/initial-tuning.csv
+INFO 01-08-20 04:51:32   md5 checksum: 5574db81f060db1f2c26f7be2d830401
+INFO 01-08-20 04:51:32 > Stored train predictions to results/run-0/traditional-run-0/responsory/full/initial-train-pred.txt
+INFO 01-08-20 04:51:32   md5 checksum: 82c4095a73fde6484636009c51d10388
+INFO 01-08-20 04:51:32   Train accuracy: 47.14%
+INFO 01-08-20 04:51:32 > Stored test predictions to results/run-0/traditional-run-0/responsory/full/initial-test-pred.txt
+INFO 01-08-20 04:51:32   md5 checksum: 38d2ad3a7c4f342bc45ee40ede31933e
+INFO 01-08-20 04:51:32   Test accuracy: 46.51%
+INFO 01-08-20 04:51:32 > Done.
+INFO 01-08-20 04:51:32 ************************************************************
+INFO 01-08-20 04:51:32 Training model...
+INFO 01-08-20 04:51:32 * feature_set=final-ambitus
+INFO 01-08-20 04:51:32 * genre=responsory
+INFO 01-08-20 04:51:32 * subset=full
+INFO 01-08-20 04:51:33 * Training/test size: 4922/2109
+INFO 01-08-20 04:51:33 * Num. features: 3
+INFO 01-08-20 04:51:33 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 04:51:33   Tune using randomized search (n_iter=20, random_state=21)
+INFO 01-08-20 04:51:33   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 04:54:51   Best params: {'n_estimators': 504, 'max_samples': 0.5151515151515151, 'max_features': 0.25252525252525254, 'max_depth': 18, 'criterion': 'gini', 'bootstrap': True}
+INFO 01-08-20 04:54:51   Mean cross validation statistics for best params:
+INFO 01-08-20 04:54:51   - Train/test accuracy: 90.51%%/88.70%% (rank 1)
+INFO 01-08-20 04:54:51   - Train/test precision: 90.74%%/89.14%% (rank 3)
+INFO 01-08-20 04:54:51   - Train/test recall: 90.51%%/88.70%% (rank 1)
+INFO 01-08-20 04:54:51   - Train/test f1: 90.50%%/88.69%% (rank 1)
+INFO 01-08-20 04:54:51   Setting model parameters to highest-accuracy params
+INFO 01-08-20 04:54:51   Tuning done in 197.37s
+INFO 01-08-20 04:54:55 > Training done in 3.89s
+INFO 01-08-20 04:55:21 > Serialized model to results/run-0/traditional-run-0/responsory/full/final-ambitus.model
+INFO 01-08-20 04:55:21   md5 checksum: 255ba23aba57084d62f3dab15692e77c
+INFO 01-08-20 04:55:21 > Stored tuning results to results/run-0/traditional-run-0/responsory/full/final-ambitus-tuning.csv
+INFO 01-08-20 04:55:21   md5 checksum: 0fe39a618588d431961b5a3825937f49
+INFO 01-08-20 04:55:22 > Stored train predictions to results/run-0/traditional-run-0/responsory/full/final-ambitus-train-pred.txt
+INFO 01-08-20 04:55:22   md5 checksum: 11f8ab9ceebb78fdf11b13d7471db581
+INFO 01-08-20 04:55:22   Train accuracy: 90.45%
+INFO 01-08-20 04:55:22 > Stored test predictions to results/run-0/traditional-run-0/responsory/full/final-ambitus-test-pred.txt
+INFO 01-08-20 04:55:22   md5 checksum: aee44e5492c7bcd3a15746be4c1b9fae
+INFO 01-08-20 04:55:22   Test accuracy: 88.57%
+INFO 01-08-20 04:55:22 > Done.
+INFO 01-08-20 04:55:22 ************************************************************
+INFO 01-08-20 04:55:22 Training model...
+INFO 01-08-20 04:55:22 * feature_set=final-initial
+INFO 01-08-20 04:55:22 * genre=responsory
+INFO 01-08-20 04:55:22 * subset=full
+INFO 01-08-20 04:55:23 * Training/test size: 4922/2109
+INFO 01-08-20 04:55:23 * Num. features: 2
+INFO 01-08-20 04:55:23 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 04:55:23   Tune using randomized search (n_iter=20, random_state=87)
+INFO 01-08-20 04:55:23   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 04:57:49   Best params: {'n_estimators': 353, 'max_samples': 0.595959595959596, 'max_features': 0.6464646464646465, 'max_depth': 298, 'criterion': 'gini', 'bootstrap': True}
+INFO 01-08-20 04:57:49   Mean cross validation statistics for best params:
+INFO 01-08-20 04:57:49   - Train/test accuracy: 75.67%%/74.95%% (rank 1)
+INFO 01-08-20 04:57:49   - Train/test precision: 79.62%%/78.55%% (rank 3)
+INFO 01-08-20 04:57:49   - Train/test recall: 75.67%%/74.95%% (rank 1)
+INFO 01-08-20 04:57:49   - Train/test f1: 74.22%%/73.36%% (rank 1)
+INFO 01-08-20 04:57:49   Setting model parameters to highest-accuracy params
+INFO 01-08-20 04:57:49   Tuning done in 145.19s
+INFO 01-08-20 04:57:52 > Training done in 3.37s
+INFO 01-08-20 04:57:59 > Serialized model to results/run-0/traditional-run-0/responsory/full/final-initial.model
+INFO 01-08-20 04:57:59   md5 checksum: a0135a1cde9cc8ba34a35ee58162f762
+INFO 01-08-20 04:57:59 > Stored tuning results to results/run-0/traditional-run-0/responsory/full/final-initial-tuning.csv
+INFO 01-08-20 04:57:59   md5 checksum: 0cc6ed5b1fd46dce31264d7fb9d0c8d6
+INFO 01-08-20 04:58:00 > Stored train predictions to results/run-0/traditional-run-0/responsory/full/final-initial-train-pred.txt
+INFO 01-08-20 04:58:00   md5 checksum: 50e2d077d9b165eb97462947e780ce2c
+INFO 01-08-20 04:58:00   Train accuracy: 75.62%
+INFO 01-08-20 04:58:00 > Stored test predictions to results/run-0/traditional-run-0/responsory/full/final-initial-test-pred.txt
+INFO 01-08-20 04:58:00   md5 checksum: 7a151bb6705da2f822ad021a36c3f587
+INFO 01-08-20 04:58:00   Test accuracy: 75.25%
+INFO 01-08-20 04:58:00 > Done.
+INFO 01-08-20 04:58:00 ************************************************************
+INFO 01-08-20 04:58:00 Training model...
+INFO 01-08-20 04:58:00 * feature_set=final-ambitus-initial
+INFO 01-08-20 04:58:00 * genre=responsory
+INFO 01-08-20 04:58:00 * subset=full
+INFO 01-08-20 04:58:01 * Training/test size: 4922/2109
+INFO 01-08-20 04:58:01 * Num. features: 4
+INFO 01-08-20 04:58:01 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 04:58:01   Tune using randomized search (n_iter=20, random_state=88)
+INFO 01-08-20 04:58:01   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 05:02:03   Best params: {'n_estimators': 342, 'max_samples': 0.5151515151515151, 'max_features': 0.8383838383838385, 'max_depth': 828, 'criterion': 'entropy', 'bootstrap': True}
+INFO 01-08-20 05:02:03   Mean cross validation statistics for best params:
+INFO 01-08-20 05:02:03   - Train/test accuracy: 92.22%%/88.24%% (rank 1)
+INFO 01-08-20 05:02:03   - Train/test precision: 92.29%%/88.50%% (rank 1)
+INFO 01-08-20 05:02:03   - Train/test recall: 92.22%%/88.24%% (rank 1)
+INFO 01-08-20 05:02:03   - Train/test f1: 92.22%%/88.22%% (rank 1)
+INFO 01-08-20 05:02:03   Setting model parameters to highest-accuracy params
+INFO 01-08-20 05:02:03   Tuning done in 242.34s
+INFO 01-08-20 05:02:07 > Training done in 3.09s
+INFO 01-08-20 05:02:31 > Serialized model to results/run-0/traditional-run-0/responsory/full/final-ambitus-initial.model
+INFO 01-08-20 05:02:31   md5 checksum: 43565679d3b75c389a5c7712ed188cae
+INFO 01-08-20 05:02:31 > Stored tuning results to results/run-0/traditional-run-0/responsory/full/final-ambitus-initial-tuning.csv
+INFO 01-08-20 05:02:31   md5 checksum: 28429f797d0ebb0cc78273671671129d
+INFO 01-08-20 05:02:31 > Stored train predictions to results/run-0/traditional-run-0/responsory/full/final-ambitus-initial-train-pred.txt
+INFO 01-08-20 05:02:31   md5 checksum: 011c497594a85edb19de8c19bbba685c
+INFO 01-08-20 05:02:31   Train accuracy: 91.95%
+INFO 01-08-20 05:02:32 > Stored test predictions to results/run-0/traditional-run-0/responsory/full/final-ambitus-initial-test-pred.txt
+INFO 01-08-20 05:02:32   md5 checksum: b988f5acc09d8058598c19c65f7719a8
+INFO 01-08-20 05:02:32   Test accuracy: 89.62%
+INFO 01-08-20 05:02:32 > Done.
+INFO 01-08-20 05:02:32 ************************************************************
+INFO 01-08-20 05:02:32 Training model...
+INFO 01-08-20 05:02:32 * feature_set=ambitus-initial
+INFO 01-08-20 05:02:32 * genre=responsory
+INFO 01-08-20 05:02:32 * subset=full
+INFO 01-08-20 05:02:33 * Training/test size: 4922/2109
+INFO 01-08-20 05:02:33 * Num. features: 3
+INFO 01-08-20 05:02:33 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 05:02:33   Tune using randomized search (n_iter=20, random_state=12)
+INFO 01-08-20 05:02:33   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 05:05:47   Best params: {'n_estimators': 639, 'max_samples': 0.9141414141414141, 'max_features': 0.8989898989898991, 'max_depth': 859, 'criterion': 'gini', 'bootstrap': False}
+INFO 01-08-20 05:05:47   Mean cross validation statistics for best params:
+INFO 01-08-20 05:05:47   - Train/test accuracy: 74.29%%/66.74%% (rank 1)
+INFO 01-08-20 05:05:47   - Train/test precision: 75.54%%/66.11%% (rank 4)
+INFO 01-08-20 05:05:47   - Train/test recall: 74.29%%/66.74%% (rank 1)
+INFO 01-08-20 05:05:47   - Train/test f1: 73.67%%/65.92%% (rank 3)
+INFO 01-08-20 05:05:47   Setting model parameters to highest-accuracy params
+INFO 01-08-20 05:05:47   Tuning done in 193.63s
+INFO 01-08-20 05:05:52 > Training done in 5.56s
+INFO 01-08-20 05:07:01 > Serialized model to results/run-0/traditional-run-0/responsory/full/ambitus-initial.model
+INFO 01-08-20 05:07:01   md5 checksum: e8b1bbf7d081193175038f162dc3b430
+INFO 01-08-20 05:07:01 > Stored tuning results to results/run-0/traditional-run-0/responsory/full/ambitus-initial-tuning.csv
+INFO 01-08-20 05:07:01   md5 checksum: 5c224f8d2de45b069ed5a273f446732b
+INFO 01-08-20 05:07:02 > Stored train predictions to results/run-0/traditional-run-0/responsory/full/ambitus-initial-train-pred.txt
+INFO 01-08-20 05:07:02   md5 checksum: 75ed1f06bd211a527ba7de461b5e3d7a
+INFO 01-08-20 05:07:02   Train accuracy: 73.71%
+INFO 01-08-20 05:07:03 > Stored test predictions to results/run-0/traditional-run-0/responsory/full/ambitus-initial-test-pred.txt
+INFO 01-08-20 05:07:03   md5 checksum: e69306981a5652d34ac44642f0ee6b78
+INFO 01-08-20 05:07:03   Test accuracy: 70.41%
+INFO 01-08-20 05:07:03 > Done.
+INFO 01-08-20 05:07:03 ************************************************************
+INFO 01-08-20 05:07:03 Training model...
+INFO 01-08-20 05:07:03 * feature_set=final
+INFO 01-08-20 05:07:03 * genre=responsory
+INFO 01-08-20 05:07:03 * subset=subset
+INFO 01-08-20 05:07:03 * Training/test size: 1234/529
+INFO 01-08-20 05:07:03 * Num. features: 1
+INFO 01-08-20 05:07:03 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 05:07:03   Tune using randomized search (n_iter=20, random_state=65)
+INFO 01-08-20 05:07:03   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 05:08:45   Best params: {'n_estimators': 423, 'max_samples': 0.5858585858585859, 'max_features': 0.48484848484848486, 'max_depth': 568, 'criterion': 'gini', 'bootstrap': False}
+INFO 01-08-20 05:08:45   Mean cross validation statistics for best params:
+INFO 01-08-20 05:08:45   - Train/test accuracy: 54.19%%/53.65%% (rank 1)
+INFO 01-08-20 05:08:45   - Train/test precision: 50.20%%/37.74%% (rank 1)
+INFO 01-08-20 05:08:45   - Train/test recall: 54.19%%/53.65%% (rank 1)
+INFO 01-08-20 05:08:45   - Train/test f1: 40.15%%/39.51%% (rank 1)
+INFO 01-08-20 05:08:45   Setting model parameters to highest-accuracy params
+INFO 01-08-20 05:08:45   Tuning done in 102.32s
+INFO 01-08-20 05:08:47 > Training done in 2.09s
+INFO 01-08-20 05:08:47 > Serialized model to results/run-0/traditional-run-0/responsory/subset/final.model
+INFO 01-08-20 05:08:47   md5 checksum: 65807f54841d8e5711afacc7021bcb9a
+INFO 01-08-20 05:08:47 > Stored tuning results to results/run-0/traditional-run-0/responsory/subset/final-tuning.csv
+INFO 01-08-20 05:08:47   md5 checksum: b1701e0e0c5daf0d492fc9485f7ac46a
+INFO 01-08-20 05:08:48 > Stored train predictions to results/run-0/traditional-run-0/responsory/subset/final-train-pred.txt
+INFO 01-08-20 05:08:48   md5 checksum: f836f5a486efcb47500792e2687681b5
+INFO 01-08-20 05:08:48   Train accuracy: 54.13%
+INFO 01-08-20 05:08:48 > Stored test predictions to results/run-0/traditional-run-0/responsory/subset/final-test-pred.txt
+INFO 01-08-20 05:08:48   md5 checksum: 9cbd520b9ecfed023d7d899e79f0d372
+INFO 01-08-20 05:08:48   Test accuracy: 54.25%
+INFO 01-08-20 05:08:48 > Done.
+INFO 01-08-20 05:08:48 ************************************************************
+INFO 01-08-20 05:08:48 Training model...
+INFO 01-08-20 05:08:48 * feature_set=ambitus
+INFO 01-08-20 05:08:48 * genre=responsory
+INFO 01-08-20 05:08:48 * subset=subset
+INFO 01-08-20 05:08:48 * Training/test size: 1234/529
+INFO 01-08-20 05:08:48 * Num. features: 2
+INFO 01-08-20 05:08:48 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 05:08:48   Tune using randomized search (n_iter=20, random_state=87)
+INFO 01-08-20 05:08:48   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 05:10:59   Best params: {'n_estimators': 371, 'max_samples': 0.7828282828282829, 'max_features': 0.8787878787878789, 'max_depth': 499, 'criterion': 'gini', 'bootstrap': False}
+INFO 01-08-20 05:10:59   Mean cross validation statistics for best params:
+INFO 01-08-20 05:10:59   - Train/test accuracy: 57.62%%/53.73%% (rank 1)
+INFO 01-08-20 05:10:59   - Train/test precision: 60.19%%/49.92%% (rank 4)
+INFO 01-08-20 05:10:59   - Train/test recall: 57.62%%/53.73%% (rank 1)
+INFO 01-08-20 05:10:59   - Train/test f1: 55.33%%/50.71%% (rank 1)
+INFO 01-08-20 05:10:59   Setting model parameters to highest-accuracy params
+INFO 01-08-20 05:10:59   Tuning done in 131.32s
+INFO 01-08-20 05:11:01 > Training done in 1.53s
+INFO 01-08-20 05:11:05 > Serialized model to results/run-0/traditional-run-0/responsory/subset/ambitus.model
+INFO 01-08-20 05:11:05   md5 checksum: 6d037dd789ffec83f4603fa4dbec82a7
+INFO 01-08-20 05:11:05 > Stored tuning results to results/run-0/traditional-run-0/responsory/subset/ambitus-tuning.csv
+INFO 01-08-20 05:11:05   md5 checksum: 24e7f6bdfb96cde4e8bda1739b130544
+INFO 01-08-20 05:11:05 > Stored train predictions to results/run-0/traditional-run-0/responsory/subset/ambitus-train-pred.txt
+INFO 01-08-20 05:11:05   md5 checksum: 08f7d9f92fffe14cc65a4bb6f4b83d8d
+INFO 01-08-20 05:11:05   Train accuracy: 57.21%
+INFO 01-08-20 05:11:05 > Stored test predictions to results/run-0/traditional-run-0/responsory/subset/ambitus-test-pred.txt
+INFO 01-08-20 05:11:05   md5 checksum: a7feafaf7054789dd5bc102c4ead8268
+INFO 01-08-20 05:11:05   Test accuracy: 49.72%
+INFO 01-08-20 05:11:05 > Done.
+INFO 01-08-20 05:11:05 ************************************************************
+INFO 01-08-20 05:11:05 Training model...
+INFO 01-08-20 05:11:05 * feature_set=initial
+INFO 01-08-20 05:11:05 * genre=responsory
+INFO 01-08-20 05:11:05 * subset=subset
+INFO 01-08-20 05:11:05 * Training/test size: 1234/529
+INFO 01-08-20 05:11:05 * Num. features: 1
+INFO 01-08-20 05:11:05 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 05:11:05   Tune using randomized search (n_iter=20, random_state=88)
+INFO 01-08-20 05:11:05   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 05:13:33   Best params: {'n_estimators': 853, 'max_samples': 0.7474747474747475, 'max_features': 0.21212121212121213, 'max_depth': 373, 'criterion': 'gini', 'bootstrap': True}
+INFO 01-08-20 05:13:33   Mean cross validation statistics for best params:
+INFO 01-08-20 05:13:33   - Train/test accuracy: 46.13%%/45.14%% (rank 1)
+INFO 01-08-20 05:13:33   - Train/test precision: 43.72%%/41.57%% (rank 1)
+INFO 01-08-20 05:13:33   - Train/test recall: 46.13%%/45.14%% (rank 1)
+INFO 01-08-20 05:13:33   - Train/test f1: 38.71%%/37.79%% (rank 1)
+INFO 01-08-20 05:13:33   Setting model parameters to highest-accuracy params
+INFO 01-08-20 05:13:33   Tuning done in 147.99s
+INFO 01-08-20 05:13:38 > Training done in 5.08s
+INFO 01-08-20 05:13:42 > Serialized model to results/run-0/traditional-run-0/responsory/subset/initial.model
+INFO 01-08-20 05:13:42   md5 checksum: cc2314cf19fdf332969a09021d4849ce
+INFO 01-08-20 05:13:42 > Stored tuning results to results/run-0/traditional-run-0/responsory/subset/initial-tuning.csv
+INFO 01-08-20 05:13:42   md5 checksum: 805e2f5219cb4d911af3f81fb7c8e4a6
+INFO 01-08-20 05:13:42 > Stored train predictions to results/run-0/traditional-run-0/responsory/subset/initial-train-pred.txt
+INFO 01-08-20 05:13:42   md5 checksum: 89985ff64456b6d90d173f7e66758826
+INFO 01-08-20 05:13:42   Train accuracy: 46.03%
+INFO 01-08-20 05:13:43 > Stored test predictions to results/run-0/traditional-run-0/responsory/subset/initial-test-pred.txt
+INFO 01-08-20 05:13:43   md5 checksum: 1be6c9c94deda336d7e162bcdaa25c22
+INFO 01-08-20 05:13:43   Test accuracy: 47.07%
+INFO 01-08-20 05:13:43 > Done.
+INFO 01-08-20 05:13:43 ************************************************************
+INFO 01-08-20 05:13:43 Training model...
+INFO 01-08-20 05:13:43 * feature_set=final-ambitus
+INFO 01-08-20 05:13:43 * genre=responsory
+INFO 01-08-20 05:13:43 * subset=subset
+INFO 01-08-20 05:13:43 * Training/test size: 1234/529
+INFO 01-08-20 05:13:43 * Num. features: 3
+INFO 01-08-20 05:13:43 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 05:13:43   Tune using randomized search (n_iter=20, random_state=37)
+INFO 01-08-20 05:13:43   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 05:15:44   Best params: {'n_estimators': 194, 'max_samples': 0.9191919191919192, 'max_features': 0.696969696969697, 'max_depth': 843, 'criterion': 'entropy', 'bootstrap': True}
+INFO 01-08-20 05:15:44   Mean cross validation statistics for best params:
+INFO 01-08-20 05:15:44   - Train/test accuracy: 88.05%%/83.71%% (rank 1)
+INFO 01-08-20 05:15:44   - Train/test precision: 88.23%%/84.07%% (rank 1)
+INFO 01-08-20 05:15:44   - Train/test recall: 88.05%%/83.71%% (rank 1)
+INFO 01-08-20 05:15:44   - Train/test f1: 88.00%%/83.65%% (rank 1)
+INFO 01-08-20 05:15:44   Setting model parameters to highest-accuracy params
+INFO 01-08-20 05:15:44   Tuning done in 120.84s
+INFO 01-08-20 05:15:45 > Training done in 0.94s
+INFO 01-08-20 05:15:51 > Serialized model to results/run-0/traditional-run-0/responsory/subset/final-ambitus.model
+INFO 01-08-20 05:15:51   md5 checksum: 9edb2d3af99138f21ff3afb689ce7396
+INFO 01-08-20 05:15:51 > Stored tuning results to results/run-0/traditional-run-0/responsory/subset/final-ambitus-tuning.csv
+INFO 01-08-20 05:15:51   md5 checksum: 05edb9ff6a12f66d03b75e9d1d2d36a3
+INFO 01-08-20 05:15:51 > Stored train predictions to results/run-0/traditional-run-0/responsory/subset/final-ambitus-train-pred.txt
+INFO 01-08-20 05:15:51   md5 checksum: 30ee82e40afa9f5e30f0e8c0866cd49b
+INFO 01-08-20 05:15:51   Train accuracy: 87.84%
+INFO 01-08-20 05:15:51 > Stored test predictions to results/run-0/traditional-run-0/responsory/subset/final-ambitus-test-pred.txt
+INFO 01-08-20 05:15:51   md5 checksum: 13e852585ea7338f95462e7aa1b1776d
+INFO 01-08-20 05:15:51   Test accuracy: 81.10%
+INFO 01-08-20 05:15:51 > Done.
+INFO 01-08-20 05:15:51 ************************************************************
+INFO 01-08-20 05:15:51 Training model...
+INFO 01-08-20 05:15:51 * feature_set=final-initial
+INFO 01-08-20 05:15:51 * genre=responsory
+INFO 01-08-20 05:15:51 * subset=subset
+INFO 01-08-20 05:15:51 * Training/test size: 1234/529
+INFO 01-08-20 05:15:51 * Num. features: 2
+INFO 01-08-20 05:15:51 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 05:15:51   Tune using randomized search (n_iter=20, random_state=77)
+INFO 01-08-20 05:15:51   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 05:18:35   Best params: {'n_estimators': 527, 'max_samples': 0.7878787878787878, 'max_features': 0.9797979797979799, 'max_depth': 359, 'criterion': 'entropy', 'bootstrap': False}
+INFO 01-08-20 05:18:35   Mean cross validation statistics for best params:
+INFO 01-08-20 05:18:35   - Train/test accuracy: 70.32%%/68.31%% (rank 1)
+INFO 01-08-20 05:18:35   - Train/test precision: 74.89%%/72.53%% (rank 7)
+INFO 01-08-20 05:18:35   - Train/test recall: 70.32%%/68.31%% (rank 1)
+INFO 01-08-20 05:18:35   - Train/test f1: 67.84%%/65.54%% (rank 2)
+INFO 01-08-20 05:18:35   Setting model parameters to highest-accuracy params
+INFO 01-08-20 05:18:35   Tuning done in 164.23s
+INFO 01-08-20 05:18:38 > Training done in 2.49s
+INFO 01-08-20 05:18:42 > Serialized model to results/run-0/traditional-run-0/responsory/subset/final-initial.model
+INFO 01-08-20 05:18:42   md5 checksum: bf303b50923a8c54710b7b1f8819bcf0
+INFO 01-08-20 05:18:42 > Stored tuning results to results/run-0/traditional-run-0/responsory/subset/final-initial-tuning.csv
+INFO 01-08-20 05:18:42   md5 checksum: f6c2968e71e577e03ad4684c612d1058
+INFO 01-08-20 05:18:42 > Stored train predictions to results/run-0/traditional-run-0/responsory/subset/final-initial-train-pred.txt
+INFO 01-08-20 05:18:42   md5 checksum: 238541142cbf0139d9e0eaa6df177c5d
+INFO 01-08-20 05:18:42   Train accuracy: 70.18%
+INFO 01-08-20 05:18:43 > Stored test predictions to results/run-0/traditional-run-0/responsory/subset/final-initial-test-pred.txt
+INFO 01-08-20 05:18:43   md5 checksum: c247801f6bed6ee29d5ec5c7bdfd20e6
+INFO 01-08-20 05:18:43   Test accuracy: 72.59%
+INFO 01-08-20 05:18:43 > Done.
+INFO 01-08-20 05:18:43 ************************************************************
+INFO 01-08-20 05:18:43 Training model...
+INFO 01-08-20 05:18:43 * feature_set=final-ambitus-initial
+INFO 01-08-20 05:18:43 * genre=responsory
+INFO 01-08-20 05:18:43 * subset=subset
+INFO 01-08-20 05:18:43 * Training/test size: 1234/529
+INFO 01-08-20 05:18:43 * Num. features: 4
+INFO 01-08-20 05:18:43 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 05:18:43   Tune using randomized search (n_iter=20, random_state=9)
+INFO 01-08-20 05:18:43   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 05:21:01   Best params: {'n_estimators': 592, 'max_samples': 0.8232323232323233, 'max_features': 0.4545454545454546, 'max_depth': 179, 'criterion': 'gini', 'bootstrap': True}
+INFO 01-08-20 05:21:01   Mean cross validation statistics for best params:
+INFO 01-08-20 05:21:01   - Train/test accuracy: 91.25%%/83.96%% (rank 1)
+INFO 01-08-20 05:21:01   - Train/test precision: 91.41%%/84.25%% (rank 1)
+INFO 01-08-20 05:21:01   - Train/test recall: 91.25%%/83.96%% (rank 1)
+INFO 01-08-20 05:21:01   - Train/test f1: 91.20%%/83.84%% (rank 1)
+INFO 01-08-20 05:21:01   Setting model parameters to highest-accuracy params
+INFO 01-08-20 05:21:01   Tuning done in 137.67s
+INFO 01-08-20 05:21:04 > Training done in 3.62s
+INFO 01-08-20 05:21:31 > Serialized model to results/run-0/traditional-run-0/responsory/subset/final-ambitus-initial.model
+INFO 01-08-20 05:21:31   md5 checksum: b763ce808263ebacc506ab32b7dc653f
+INFO 01-08-20 05:21:31 > Stored tuning results to results/run-0/traditional-run-0/responsory/subset/final-ambitus-initial-tuning.csv
+INFO 01-08-20 05:21:31   md5 checksum: c942a69f04a4718971d745527864af77
+INFO 01-08-20 05:21:32 > Stored train predictions to results/run-0/traditional-run-0/responsory/subset/final-ambitus-initial-train-pred.txt
+INFO 01-08-20 05:21:32   md5 checksum: b663d24b86175f6be262e45742b97ebe
+INFO 01-08-20 05:21:32   Train accuracy: 91.00%
+INFO 01-08-20 05:21:32 > Stored test predictions to results/run-0/traditional-run-0/responsory/subset/final-ambitus-initial-test-pred.txt
+INFO 01-08-20 05:21:32   md5 checksum: ac15d66c302276e197563133bdecec46
+INFO 01-08-20 05:21:32   Test accuracy: 81.66%
+INFO 01-08-20 05:21:32 > Done.
+INFO 01-08-20 05:21:32 ************************************************************
+INFO 01-08-20 05:21:32 Training model...
+INFO 01-08-20 05:21:32 * feature_set=ambitus-initial
+INFO 01-08-20 05:21:32 * genre=responsory
+INFO 01-08-20 05:21:32 * subset=subset
+INFO 01-08-20 05:21:32 * Training/test size: 1234/529
+INFO 01-08-20 05:21:32 * Num. features: 3
+INFO 01-08-20 05:21:32 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 05:21:32   Tune using randomized search (n_iter=20, random_state=80)
+INFO 01-08-20 05:21:32   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 05:24:18   Best params: {'n_estimators': 220, 'max_samples': 0.8838383838383839, 'max_features': 0.7777777777777778, 'max_depth': 412, 'criterion': 'gini', 'bootstrap': True}
+INFO 01-08-20 05:24:18   Mean cross validation statistics for best params:
+INFO 01-08-20 05:24:18   - Train/test accuracy: 72.99%%/64.84%% (rank 1)
+INFO 01-08-20 05:24:18   - Train/test precision: 73.63%%/64.83%% (rank 4)
+INFO 01-08-20 05:24:18   - Train/test recall: 72.99%%/64.84%% (rank 1)
+INFO 01-08-20 05:24:18   - Train/test f1: 72.47%%/64.07%% (rank 1)
+INFO 01-08-20 05:24:18   Setting model parameters to highest-accuracy params
+INFO 01-08-20 05:24:18   Tuning done in 165.80s
+INFO 01-08-20 05:24:20 > Training done in 1.54s
+INFO 01-08-20 05:24:27 > Serialized model to results/run-0/traditional-run-0/responsory/subset/ambitus-initial.model
+INFO 01-08-20 05:24:27   md5 checksum: 21939bc4ab731b48820e1413aec42020
+INFO 01-08-20 05:24:27 > Stored tuning results to results/run-0/traditional-run-0/responsory/subset/ambitus-initial-tuning.csv
+INFO 01-08-20 05:24:27   md5 checksum: 09935ad152234ba405ef873c71a14a89
+INFO 01-08-20 05:24:27 > Stored train predictions to results/run-0/traditional-run-0/responsory/subset/ambitus-initial-train-pred.txt
+INFO 01-08-20 05:24:27   md5 checksum: 9d1cd5f50fdf5147bf8bcf47d9077571
+INFO 01-08-20 05:24:27   Train accuracy: 72.37%
+INFO 01-08-20 05:24:27 > Stored test predictions to results/run-0/traditional-run-0/responsory/subset/ambitus-initial-test-pred.txt
+INFO 01-08-20 05:24:27   md5 checksum: a045896a8c5e27c259880f6ecb7842d1
+INFO 01-08-20 05:24:27   Test accuracy: 60.87%
+INFO 01-08-20 05:24:27 > Done.
+INFO 01-08-20 05:24:27 ************************************************************
+INFO 01-08-20 05:24:27 Training model...
+INFO 01-08-20 05:24:27 * feature_set=final
+INFO 01-08-20 05:24:27 * genre=antiphon
+INFO 01-08-20 05:24:27 * subset=full
+INFO 01-08-20 05:24:30 * Training/test size: 9706/4159
+INFO 01-08-20 05:24:30 * Num. features: 1
+INFO 01-08-20 05:24:30 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 05:24:30   Tune using randomized search (n_iter=20, random_state=79)
+INFO 01-08-20 05:24:30   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 05:28:18   Best params: {'n_estimators': 433, 'max_samples': 0.8434343434343434, 'max_features': 0.23232323232323235, 'max_depth': 398, 'criterion': 'gini', 'bootstrap': True}
+INFO 01-08-20 05:28:18   Mean cross validation statistics for best params:
+INFO 01-08-20 05:28:18   - Train/test accuracy: 55.65%%/55.59%% (rank 1)
+INFO 01-08-20 05:28:18   - Train/test precision: 46.62%%/46.58%% (rank 4)
+INFO 01-08-20 05:28:18   - Train/test recall: 55.65%%/55.59%% (rank 1)
+INFO 01-08-20 05:28:18   - Train/test f1: 48.95%%/48.89%% (rank 3)
+INFO 01-08-20 05:28:18   Setting model parameters to highest-accuracy params
+INFO 01-08-20 05:28:18   Tuning done in 228.37s
+INFO 01-08-20 05:28:22 > Training done in 3.79s
+INFO 01-08-20 05:28:25 > Serialized model to results/run-0/traditional-run-0/antiphon/full/final.model
+INFO 01-08-20 05:28:25   md5 checksum: 5fd15c7361903d7b93eca8c558e86d18
+INFO 01-08-20 05:28:25 > Stored tuning results to results/run-0/traditional-run-0/antiphon/full/final-tuning.csv
+INFO 01-08-20 05:28:25   md5 checksum: 077c64ffe6cd4301fbf7ed2e79cc2945
+INFO 01-08-20 05:28:26 > Stored train predictions to results/run-0/traditional-run-0/antiphon/full/final-train-pred.txt
+INFO 01-08-20 05:28:26   md5 checksum: b68c78669a6509520682b9b7b34b101c
+INFO 01-08-20 05:28:26   Train accuracy: 55.65%
+INFO 01-08-20 05:28:27 > Stored test predictions to results/run-0/traditional-run-0/antiphon/full/final-test-pred.txt
+INFO 01-08-20 05:28:27   md5 checksum: 4c63ba913a10297ce0856fa4de904da8
+INFO 01-08-20 05:28:27   Test accuracy: 53.91%
+INFO 01-08-20 05:28:27 > Done.
+INFO 01-08-20 05:28:27 ************************************************************
+INFO 01-08-20 05:28:27 Training model...
+INFO 01-08-20 05:28:27 * feature_set=ambitus
+INFO 01-08-20 05:28:27 * genre=antiphon
+INFO 01-08-20 05:28:27 * subset=full
+INFO 01-08-20 05:28:29 * Training/test size: 9706/4159
+INFO 01-08-20 05:28:29 * Num. features: 2
+INFO 01-08-20 05:28:29 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 05:28:29   Tune using randomized search (n_iter=20, random_state=64)
+INFO 01-08-20 05:28:29   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 05:31:57   Best params: {'n_estimators': 546, 'max_samples': 0.7525252525252526, 'max_features': 0.8686868686868687, 'max_depth': 607, 'criterion': 'entropy', 'bootstrap': False}
+INFO 01-08-20 05:31:57   Mean cross validation statistics for best params:
+INFO 01-08-20 05:31:57   - Train/test accuracy: 65.76%%/64.73%% (rank 1)
+INFO 01-08-20 05:31:57   - Train/test precision: 65.15%%/61.35%% (rank 1)
+INFO 01-08-20 05:31:57   - Train/test recall: 65.76%%/64.73%% (rank 1)
+INFO 01-08-20 05:31:57   - Train/test f1: 61.99%%/60.73%% (rank 1)
+INFO 01-08-20 05:31:57   Setting model parameters to highest-accuracy params
+INFO 01-08-20 05:31:57   Tuning done in 208.71s
+INFO 01-08-20 05:32:02 > Training done in 4.32s
+INFO 01-08-20 05:32:15 > Serialized model to results/run-0/traditional-run-0/antiphon/full/ambitus.model
+INFO 01-08-20 05:32:15   md5 checksum: 47199e9dcc0d64a87e9b4ff5cacde8df
+INFO 01-08-20 05:32:16 > Stored tuning results to results/run-0/traditional-run-0/antiphon/full/ambitus-tuning.csv
+INFO 01-08-20 05:32:16   md5 checksum: 05a02217e0e7870f61c1871e850a527b
+INFO 01-08-20 05:32:17 > Stored train predictions to results/run-0/traditional-run-0/antiphon/full/ambitus-train-pred.txt
+INFO 01-08-20 05:32:17   md5 checksum: 8f567bee47ab390b62651446de946e1e
+INFO 01-08-20 05:32:17   Train accuracy: 65.66%
+INFO 01-08-20 05:32:18 > Stored test predictions to results/run-0/traditional-run-0/antiphon/full/ambitus-test-pred.txt
+INFO 01-08-20 05:32:18   md5 checksum: 003e0b9305afbe3648b9251e2488e6d1
+INFO 01-08-20 05:32:18   Test accuracy: 65.79%
+INFO 01-08-20 05:32:18 > Done.
+INFO 01-08-20 05:32:18 ************************************************************
+INFO 01-08-20 05:32:18 Training model...
+INFO 01-08-20 05:32:18 * feature_set=initial
+INFO 01-08-20 05:32:18 * genre=antiphon
+INFO 01-08-20 05:32:18 * subset=full
+INFO 01-08-20 05:32:20 * Training/test size: 9706/4159
+INFO 01-08-20 05:32:20 * Num. features: 1
+INFO 01-08-20 05:32:20 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 05:32:20   Tune using randomized search (n_iter=20, random_state=99)
+INFO 01-08-20 05:32:20   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 05:36:30   Best params: {'n_estimators': 555, 'max_samples': 0.898989898989899, 'max_features': 0.020202020202020204, 'max_depth': 823, 'criterion': 'gini', 'bootstrap': True}
+INFO 01-08-20 05:36:30   Mean cross validation statistics for best params:
+INFO 01-08-20 05:36:30   - Train/test accuracy: 54.86%%/54.07%% (rank 1)
+INFO 01-08-20 05:36:30   - Train/test precision: 58.11%%/53.26%% (rank 1)
+INFO 01-08-20 05:36:30   - Train/test recall: 54.86%%/54.07%% (rank 1)
+INFO 01-08-20 05:36:30   - Train/test f1: 47.25%%/46.60%% (rank 1)
+INFO 01-08-20 05:36:30   Setting model parameters to highest-accuracy params
+INFO 01-08-20 05:36:30   Tuning done in 250.52s
+INFO 01-08-20 05:36:36 > Training done in 5.20s
+INFO 01-08-20 05:36:39 > Serialized model to results/run-0/traditional-run-0/antiphon/full/initial.model
+INFO 01-08-20 05:36:39   md5 checksum: 668ac4146b2084aef55ead1b98335248
+INFO 01-08-20 05:36:39 > Stored tuning results to results/run-0/traditional-run-0/antiphon/full/initial-tuning.csv
+INFO 01-08-20 05:36:39   md5 checksum: 4c447597623d08a791e816fbf9bf26cf
+INFO 01-08-20 05:36:40 > Stored train predictions to results/run-0/traditional-run-0/antiphon/full/initial-train-pred.txt
+INFO 01-08-20 05:36:40   md5 checksum: 6e8ffc37d0bf00def4ca00c200bc7dd5
+INFO 01-08-20 05:36:40   Train accuracy: 54.75%
+INFO 01-08-20 05:36:41 > Stored test predictions to results/run-0/traditional-run-0/antiphon/full/initial-test-pred.txt
+INFO 01-08-20 05:36:41   md5 checksum: 72bb76a3bdd7fef5b53717388c4e0081
+INFO 01-08-20 05:36:41   Test accuracy: 53.81%
+INFO 01-08-20 05:36:41 > Done.
+INFO 01-08-20 05:36:41 ************************************************************
+INFO 01-08-20 05:36:41 Training model...
+INFO 01-08-20 05:36:41 * feature_set=final-ambitus
+INFO 01-08-20 05:36:41 * genre=antiphon
+INFO 01-08-20 05:36:41 * subset=full
+INFO 01-08-20 05:36:43 * Training/test size: 9706/4159
+INFO 01-08-20 05:36:43 * Num. features: 3
+INFO 01-08-20 05:36:43 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 05:36:43   Tune using randomized search (n_iter=20, random_state=49)
+INFO 01-08-20 05:36:43   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 05:41:27   Best params: {'n_estimators': 789, 'max_samples': 0.5303030303030303, 'max_features': 0.7575757575757577, 'max_depth': 472, 'criterion': 'gini', 'bootstrap': True}
+INFO 01-08-20 05:41:27   Mean cross validation statistics for best params:
+INFO 01-08-20 05:41:27   - Train/test accuracy: 81.89%%/80.44%% (rank 1)
+INFO 01-08-20 05:41:27   - Train/test precision: 82.33%%/80.86%% (rank 1)
+INFO 01-08-20 05:41:27   - Train/test recall: 81.89%%/80.44%% (rank 1)
+INFO 01-08-20 05:41:27   - Train/test f1: 81.79%%/80.27%% (rank 1)
+INFO 01-08-20 05:41:27   Setting model parameters to highest-accuracy params
+INFO 01-08-20 05:41:27   Tuning done in 284.05s
+INFO 01-08-20 05:41:36 > Training done in 8.88s
+INFO 01-08-20 05:42:53 > Serialized model to results/run-0/traditional-run-0/antiphon/full/final-ambitus.model
+INFO 01-08-20 05:42:53   md5 checksum: 3af7aca91c1e9e69baa110791d322c74
+INFO 01-08-20 05:42:53 > Stored tuning results to results/run-0/traditional-run-0/antiphon/full/final-ambitus-tuning.csv
+INFO 01-08-20 05:42:53   md5 checksum: 8de6c46e8b58a8c30cfc29b3a51660ee
+INFO 01-08-20 05:42:55 > Stored train predictions to results/run-0/traditional-run-0/antiphon/full/final-ambitus-train-pred.txt
+INFO 01-08-20 05:42:55   md5 checksum: 4d632d09e12d901d20e8dd881d5d2bce
+INFO 01-08-20 05:42:55   Train accuracy: 81.78%
+INFO 01-08-20 05:42:57 > Stored test predictions to results/run-0/traditional-run-0/antiphon/full/final-ambitus-test-pred.txt
+INFO 01-08-20 05:42:57   md5 checksum: 3392de8cceacf966895f6973b6a58337
+INFO 01-08-20 05:42:57   Test accuracy: 79.01%
+INFO 01-08-20 05:42:57 > Done.
+INFO 01-08-20 05:42:57 ************************************************************
+INFO 01-08-20 05:42:57 Training model...
+INFO 01-08-20 05:42:57 * feature_set=final-initial
+INFO 01-08-20 05:42:57 * genre=antiphon
+INFO 01-08-20 05:42:57 * subset=full
+INFO 01-08-20 05:43:00 * Training/test size: 9706/4159
+INFO 01-08-20 05:43:00 * Num. features: 2
+INFO 01-08-20 05:43:00 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 05:43:00   Tune using randomized search (n_iter=20, random_state=19)
+INFO 01-08-20 05:43:00   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 05:47:25   Best params: {'n_estimators': 490, 'max_samples': 0.5757575757575758, 'max_features': 0.06060606060606061, 'max_depth': 586, 'criterion': 'gini', 'bootstrap': False}
+INFO 01-08-20 05:47:25   Mean cross validation statistics for best params:
+INFO 01-08-20 05:47:25   - Train/test accuracy: 74.91%%/74.41%% (rank 1)
+INFO 01-08-20 05:47:25   - Train/test precision: 74.20%%/73.68%% (rank 1)
+INFO 01-08-20 05:47:25   - Train/test recall: 74.91%%/74.41%% (rank 1)
+INFO 01-08-20 05:47:25   - Train/test f1: 72.93%%/72.37%% (rank 4)
+INFO 01-08-20 05:47:25   Setting model parameters to highest-accuracy params
+INFO 01-08-20 05:47:25   Tuning done in 265.32s
+INFO 01-08-20 05:47:30 > Training done in 5.47s
+INFO 01-08-20 05:47:44 > Serialized model to results/run-0/traditional-run-0/antiphon/full/final-initial.model
+INFO 01-08-20 05:47:44   md5 checksum: fbaafdcc57748cb720cfc10d21b69a53
+INFO 01-08-20 05:47:44 > Stored tuning results to results/run-0/traditional-run-0/antiphon/full/final-initial-tuning.csv
+INFO 01-08-20 05:47:44   md5 checksum: e2f9e0352ff906423210c25b30ecf7d5
+INFO 01-08-20 05:47:45 > Stored train predictions to results/run-0/traditional-run-0/antiphon/full/final-initial-train-pred.txt
+INFO 01-08-20 05:47:45   md5 checksum: 929c3b61f5733688a773c06f11daddf4
+INFO 01-08-20 05:47:45   Train accuracy: 74.86%
+INFO 01-08-20 05:47:46 > Stored test predictions to results/run-0/traditional-run-0/antiphon/full/final-initial-test-pred.txt
+INFO 01-08-20 05:47:46   md5 checksum: c1a22fbd563b8c4301c6ac67118c86d5
+INFO 01-08-20 05:47:46   Test accuracy: 73.05%
+INFO 01-08-20 05:47:46 > Done.
+INFO 01-08-20 05:47:46 ************************************************************
+INFO 01-08-20 05:47:46 Training model...
+INFO 01-08-20 05:47:46 * feature_set=final-ambitus-initial
+INFO 01-08-20 05:47:46 * genre=antiphon
+INFO 01-08-20 05:47:46 * subset=full
+INFO 01-08-20 05:47:49 * Training/test size: 9706/4159
+INFO 01-08-20 05:47:49 * Num. features: 4
+INFO 01-08-20 05:47:49 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 05:47:49   Tune using randomized search (n_iter=20, random_state=14)
+INFO 01-08-20 05:47:49   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 05:54:21   Best params: {'n_estimators': 493, 'max_samples': 0.6666666666666667, 'max_features': 0.030303030303030304, 'max_depth': 746, 'criterion': 'entropy', 'bootstrap': True}
+INFO 01-08-20 05:54:21   Mean cross validation statistics for best params:
+INFO 01-08-20 05:54:21   - Train/test accuracy: 89.52%%/85.93%% (rank 1)
+INFO 01-08-20 05:54:21   - Train/test precision: 89.74%%/86.17%% (rank 1)
+INFO 01-08-20 05:54:21   - Train/test recall: 89.52%%/85.93%% (rank 1)
+INFO 01-08-20 05:54:21   - Train/test f1: 89.47%%/85.86%% (rank 1)
+INFO 01-08-20 05:54:21   Setting model parameters to highest-accuracy params
+INFO 01-08-20 05:54:21   Tuning done in 391.80s
+INFO 01-08-20 05:54:28 > Training done in 6.65s
+INFO 01-08-20 05:55:45 > Serialized model to results/run-0/traditional-run-0/antiphon/full/final-ambitus-initial.model
+INFO 01-08-20 05:55:45   md5 checksum: f82288cc642422258601338083ac6089
+INFO 01-08-20 05:55:45 > Stored tuning results to results/run-0/traditional-run-0/antiphon/full/final-ambitus-initial-tuning.csv
+INFO 01-08-20 05:55:45   md5 checksum: 1f20a78a3e868ffdcd5542ed511a44b3
+INFO 01-08-20 05:55:46 > Stored train predictions to results/run-0/traditional-run-0/antiphon/full/final-ambitus-initial-train-pred.txt
+INFO 01-08-20 05:55:46   md5 checksum: 775ff79f200b2f1121ac88b3656d5d1a
+INFO 01-08-20 05:55:46   Train accuracy: 89.30%
+INFO 01-08-20 05:55:46 > Stored test predictions to results/run-0/traditional-run-0/antiphon/full/final-ambitus-initial-test-pred.txt
+INFO 01-08-20 05:55:46   md5 checksum: 41e1e353861196f822ceb995994bc32c
+INFO 01-08-20 05:55:46   Test accuracy: 85.57%
+INFO 01-08-20 05:55:46 > Done.
+INFO 01-08-20 05:55:46 ************************************************************
+INFO 01-08-20 05:55:46 Training model...
+INFO 01-08-20 05:55:46 * feature_set=ambitus-initial
+INFO 01-08-20 05:55:46 * genre=antiphon
+INFO 01-08-20 05:55:46 * subset=full
+INFO 01-08-20 05:55:47 * Training/test size: 9706/4159
+INFO 01-08-20 05:55:47 * Num. features: 3
+INFO 01-08-20 05:55:47 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 05:55:47   Tune using randomized search (n_iter=20, random_state=32)
+INFO 01-08-20 05:55:47   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 06:00:20   Best params: {'n_estimators': 104, 'max_samples': 0.9292929292929293, 'max_features': 0.16161616161616163, 'max_depth': 583, 'criterion': 'entropy', 'bootstrap': True}
+INFO 01-08-20 06:00:20   Mean cross validation statistics for best params:
+INFO 01-08-20 06:00:20   - Train/test accuracy: 76.35%%/72.45%% (rank 1)
+INFO 01-08-20 06:00:20   - Train/test precision: 76.64%%/73.03%% (rank 1)
+INFO 01-08-20 06:00:20   - Train/test recall: 76.35%%/72.45%% (rank 1)
+INFO 01-08-20 06:00:20   - Train/test f1: 75.79%%/71.93%% (rank 1)
+INFO 01-08-20 06:00:20   Setting model parameters to highest-accuracy params
+INFO 01-08-20 06:00:20   Tuning done in 273.57s
+INFO 01-08-20 06:00:21 > Training done in 0.78s
+INFO 01-08-20 06:00:35 > Serialized model to results/run-0/traditional-run-0/antiphon/full/ambitus-initial.model
+INFO 01-08-20 06:00:35   md5 checksum: abb94ccad3845b586ad7c1c35524dfb8
+INFO 01-08-20 06:00:35 > Stored tuning results to results/run-0/traditional-run-0/antiphon/full/ambitus-initial-tuning.csv
+INFO 01-08-20 06:00:35   md5 checksum: eeb989a4e3f7e47704e855c531babb2c
+INFO 01-08-20 06:00:35 > Stored train predictions to results/run-0/traditional-run-0/antiphon/full/ambitus-initial-train-pred.txt
+INFO 01-08-20 06:00:35   md5 checksum: d59894d1944d0f6ed9d07f4d2bd9d4ee
+INFO 01-08-20 06:00:35   Train accuracy: 76.03%
+INFO 01-08-20 06:00:35 > Stored test predictions to results/run-0/traditional-run-0/antiphon/full/ambitus-initial-test-pred.txt
+INFO 01-08-20 06:00:35   md5 checksum: fd5724d4aec3b3095c02b2fc3298405f
+INFO 01-08-20 06:00:35   Test accuracy: 74.27%
+INFO 01-08-20 06:00:35 > Done.
+INFO 01-08-20 06:00:35 ************************************************************
+INFO 01-08-20 06:00:35 Training model...
+INFO 01-08-20 06:00:35 * feature_set=final
+INFO 01-08-20 06:00:35 * genre=antiphon
+INFO 01-08-20 06:00:35 * subset=subset
+INFO 01-08-20 06:00:36 * Training/test size: 2911/1248
+INFO 01-08-20 06:00:36 * Num. features: 1
+INFO 01-08-20 06:00:36 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 06:00:36   Tune using randomized search (n_iter=20, random_state=9)
+INFO 01-08-20 06:00:36   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 06:03:03   Best params: {'n_estimators': 530, 'max_samples': 0.5656565656565656, 'max_features': 0.20202020202020204, 'max_depth': 907, 'criterion': 'gini', 'bootstrap': True}
+INFO 01-08-20 06:03:03   Mean cross validation statistics for best params:
+INFO 01-08-20 06:03:03   - Train/test accuracy: 52.82%%/52.70%% (rank 1)
+INFO 01-08-20 06:03:03   - Train/test precision: 46.50%%/45.84%% (rank 1)
+INFO 01-08-20 06:03:03   - Train/test recall: 52.82%%/52.70%% (rank 1)
+INFO 01-08-20 06:03:03   - Train/test f1: 46.67%%/46.53%% (rank 1)
+INFO 01-08-20 06:03:03   Setting model parameters to highest-accuracy params
+INFO 01-08-20 06:03:03   Tuning done in 146.23s
+INFO 01-08-20 06:03:04 > Training done in 1.86s
+INFO 01-08-20 06:03:06 > Serialized model to results/run-0/traditional-run-0/antiphon/subset/final.model
+INFO 01-08-20 06:03:06   md5 checksum: 6d1f27a212a466603f4828d3e5f21650
+INFO 01-08-20 06:03:06 > Stored tuning results to results/run-0/traditional-run-0/antiphon/subset/final-tuning.csv
+INFO 01-08-20 06:03:06   md5 checksum: 77bddb34bf04055a40cca463ce11185a
+INFO 01-08-20 06:03:06 > Stored train predictions to results/run-0/traditional-run-0/antiphon/subset/final-train-pred.txt
+INFO 01-08-20 06:03:06   md5 checksum: a7be8f5decbba81a5fe6b48b722d8a35
+INFO 01-08-20 06:03:06   Train accuracy: 52.80%
+INFO 01-08-20 06:03:06 > Stored test predictions to results/run-0/traditional-run-0/antiphon/subset/final-test-pred.txt
+INFO 01-08-20 06:03:06   md5 checksum: 335ea6966990940ad6e24b3b3ffa623b
+INFO 01-08-20 06:03:06   Test accuracy: 53.85%
+INFO 01-08-20 06:03:06 > Done.
+INFO 01-08-20 06:03:06 ************************************************************
+INFO 01-08-20 06:03:06 Training model...
+INFO 01-08-20 06:03:06 * feature_set=ambitus
+INFO 01-08-20 06:03:06 * genre=antiphon
+INFO 01-08-20 06:03:06 * subset=subset
+INFO 01-08-20 06:03:06 * Training/test size: 2911/1248
+INFO 01-08-20 06:03:06 * Num. features: 2
+INFO 01-08-20 06:03:06 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 06:03:06   Tune using randomized search (n_iter=20, random_state=32)
+INFO 01-08-20 06:03:06   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 06:06:13   Best params: {'n_estimators': 453, 'max_samples': 0.994949494949495, 'max_features': 0.6161616161616162, 'max_depth': 458, 'criterion': 'gini', 'bootstrap': False}
+INFO 01-08-20 06:06:13   Mean cross validation statistics for best params:
+INFO 01-08-20 06:06:13   - Train/test accuracy: 61.43%%/60.29%% (rank 1)
+INFO 01-08-20 06:06:13   - Train/test precision: 62.59%%/59.87%% (rank 3)
+INFO 01-08-20 06:06:13   - Train/test recall: 61.43%%/60.29%% (rank 1)
+INFO 01-08-20 06:06:13   - Train/test f1: 58.04%%/56.62%% (rank 2)
+INFO 01-08-20 06:06:13   Setting model parameters to highest-accuracy params
+INFO 01-08-20 06:06:13   Tuning done in 186.14s
+INFO 01-08-20 06:06:15 > Training done in 2.53s
+INFO 01-08-20 06:06:23 > Serialized model to results/run-0/traditional-run-0/antiphon/subset/ambitus.model
+INFO 01-08-20 06:06:23   md5 checksum: 96dba29ff0989a250bd335814ca5586c
+INFO 01-08-20 06:06:23 > Stored tuning results to results/run-0/traditional-run-0/antiphon/subset/ambitus-tuning.csv
+INFO 01-08-20 06:06:23   md5 checksum: 91ab0d26299b78937b27af7c3bab87a9
+INFO 01-08-20 06:06:24 > Stored train predictions to results/run-0/traditional-run-0/antiphon/subset/ambitus-train-pred.txt
+INFO 01-08-20 06:06:24   md5 checksum: c085df4df5767c7a3901c38a482387f9
+INFO 01-08-20 06:06:24   Train accuracy: 61.35%
+INFO 01-08-20 06:06:24 > Stored test predictions to results/run-0/traditional-run-0/antiphon/subset/ambitus-test-pred.txt
+INFO 01-08-20 06:06:24   md5 checksum: 86fd416b71f84e0cca948c88bd9d4607
+INFO 01-08-20 06:06:24   Test accuracy: 58.33%
+INFO 01-08-20 06:06:24 > Done.
+INFO 01-08-20 06:06:24 ************************************************************
+INFO 01-08-20 06:06:24 Training model...
+INFO 01-08-20 06:06:24 * feature_set=initial
+INFO 01-08-20 06:06:24 * genre=antiphon
+INFO 01-08-20 06:06:24 * subset=subset
+INFO 01-08-20 06:06:25 * Training/test size: 2911/1248
+INFO 01-08-20 06:06:25 * Num. features: 1
+INFO 01-08-20 06:06:25 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 06:06:25   Tune using randomized search (n_iter=20, random_state=74)
+INFO 01-08-20 06:06:25   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 06:08:52   Best params: {'n_estimators': 223, 'max_samples': 0.5707070707070707, 'max_features': 0.6363636363636365, 'max_depth': 559, 'criterion': 'entropy', 'bootstrap': True}
+INFO 01-08-20 06:08:52   Mean cross validation statistics for best params:
+INFO 01-08-20 06:08:52   - Train/test accuracy: 49.80%%/49.12%% (rank 1)
+INFO 01-08-20 06:08:52   - Train/test precision: 55.34%%/52.42%% (rank 1)
+INFO 01-08-20 06:08:52   - Train/test recall: 49.80%%/49.12%% (rank 1)
+INFO 01-08-20 06:08:52   - Train/test f1: 43.35%%/42.88%% (rank 1)
+INFO 01-08-20 06:08:52   Setting model parameters to highest-accuracy params
+INFO 01-08-20 06:08:52   Tuning done in 147.47s
+INFO 01-08-20 06:08:54 > Training done in 1.83s
+INFO 01-08-20 06:08:55 > Serialized model to results/run-0/traditional-run-0/antiphon/subset/initial.model
+INFO 01-08-20 06:08:55   md5 checksum: e290273007e61917e06b7b76d64f7759
+INFO 01-08-20 06:08:55 > Stored tuning results to results/run-0/traditional-run-0/antiphon/subset/initial-tuning.csv
+INFO 01-08-20 06:08:55   md5 checksum: 2f2463c9d1b66ae856cac3ddb55f954a
+INFO 01-08-20 06:08:55 > Stored train predictions to results/run-0/traditional-run-0/antiphon/subset/initial-train-pred.txt
+INFO 01-08-20 06:08:55   md5 checksum: ba575a8a218efcdabd6c4db9df742d4d
+INFO 01-08-20 06:08:55   Train accuracy: 49.67%
+INFO 01-08-20 06:08:55 > Stored test predictions to results/run-0/traditional-run-0/antiphon/subset/initial-test-pred.txt
+INFO 01-08-20 06:08:55   md5 checksum: 63f3a88a735b1e92381a79b1d9a9c484
+INFO 01-08-20 06:08:55   Test accuracy: 49.36%
+INFO 01-08-20 06:08:55 > Done.
+INFO 01-08-20 06:08:55 ************************************************************
+INFO 01-08-20 06:08:55 Training model...
+INFO 01-08-20 06:08:55 * feature_set=final-ambitus
+INFO 01-08-20 06:08:55 * genre=antiphon
+INFO 01-08-20 06:08:55 * subset=subset
+INFO 01-08-20 06:08:56 * Training/test size: 2911/1248
+INFO 01-08-20 06:08:56 * Num. features: 3
+INFO 01-08-20 06:08:56 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 06:08:56   Tune using randomized search (n_iter=20, random_state=35)
+INFO 01-08-20 06:08:56   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 06:11:57   Best params: {'n_estimators': 318, 'max_samples': 0.9242424242424243, 'max_features': 0.9595959595959597, 'max_depth': 100, 'criterion': 'gini', 'bootstrap': True}
+INFO 01-08-20 06:11:57   Mean cross validation statistics for best params:
+INFO 01-08-20 06:11:57   - Train/test accuracy: 79.90%%/76.95%% (rank 1)
+INFO 01-08-20 06:11:57   - Train/test precision: 80.53%%/77.37%% (rank 1)
+INFO 01-08-20 06:11:57   - Train/test recall: 79.90%%/76.95%% (rank 1)
+INFO 01-08-20 06:11:57   - Train/test f1: 79.69%%/76.65%% (rank 1)
+INFO 01-08-20 06:11:57   Setting model parameters to highest-accuracy params
+INFO 01-08-20 06:11:57   Tuning done in 180.98s
+INFO 01-08-20 06:11:59 > Training done in 2.15s
+INFO 01-08-20 06:12:13 > Serialized model to results/run-0/traditional-run-0/antiphon/subset/final-ambitus.model
+INFO 01-08-20 06:12:13   md5 checksum: 82b808610c1e76cd1b89adb68245f7fa
+INFO 01-08-20 06:12:13 > Stored tuning results to results/run-0/traditional-run-0/antiphon/subset/final-ambitus-tuning.csv
+INFO 01-08-20 06:12:13   md5 checksum: ba915c530e67c993060c660bb6922854
+INFO 01-08-20 06:12:14 > Stored train predictions to results/run-0/traditional-run-0/antiphon/subset/final-ambitus-train-pred.txt
+INFO 01-08-20 06:12:14   md5 checksum: b6d71dfee742ad40a1a5af5cb27a5a95
+INFO 01-08-20 06:12:14   Train accuracy: 79.70%
+INFO 01-08-20 06:12:14 > Stored test predictions to results/run-0/traditional-run-0/antiphon/subset/final-ambitus-test-pred.txt
+INFO 01-08-20 06:12:14   md5 checksum: 4109e0b82dd5daff9e236ba4277643de
+INFO 01-08-20 06:12:14   Test accuracy: 75.40%
+INFO 01-08-20 06:12:14 > Done.
+INFO 01-08-20 06:12:14 ************************************************************
+INFO 01-08-20 06:12:14 Training model...
+INFO 01-08-20 06:12:14 * feature_set=final-initial
+INFO 01-08-20 06:12:14 * genre=antiphon
+INFO 01-08-20 06:12:14 * subset=subset
+INFO 01-08-20 06:12:15 * Training/test size: 2911/1248
+INFO 01-08-20 06:12:15 * Num. features: 2
+INFO 01-08-20 06:12:15 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 06:12:15   Tune using randomized search (n_iter=20, random_state=55)
+INFO 01-08-20 06:12:15   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 06:14:36   Best params: {'n_estimators': 431, 'max_samples': 0.5808080808080808, 'max_features': 0.11111111111111112, 'max_depth': 385, 'criterion': 'gini', 'bootstrap': True}
+INFO 01-08-20 06:14:36   Mean cross validation statistics for best params:
+INFO 01-08-20 06:14:36   - Train/test accuracy: 71.75%%/70.73%% (rank 1)
+INFO 01-08-20 06:14:36   - Train/test precision: 72.75%%/71.91%% (rank 1)
+INFO 01-08-20 06:14:36   - Train/test recall: 71.75%%/70.73%% (rank 1)
+INFO 01-08-20 06:14:36   - Train/test f1: 71.04%%/69.85%% (rank 2)
+INFO 01-08-20 06:14:36   Setting model parameters to highest-accuracy params
+INFO 01-08-20 06:14:36   Tuning done in 141.50s
+INFO 01-08-20 06:14:39 > Training done in 3.08s
+INFO 01-08-20 06:14:49 > Serialized model to results/run-0/traditional-run-0/antiphon/subset/final-initial.model
+INFO 01-08-20 06:14:49   md5 checksum: 8dace7dae818c3ce945bafad452908e8
+INFO 01-08-20 06:14:49 > Stored tuning results to results/run-0/traditional-run-0/antiphon/subset/final-initial-tuning.csv
+INFO 01-08-20 06:14:49   md5 checksum: aca35ee7825eca926037c8a50a7e5366
+INFO 01-08-20 06:14:49 > Stored train predictions to results/run-0/traditional-run-0/antiphon/subset/final-initial-train-pred.txt
+INFO 01-08-20 06:14:49   md5 checksum: 8506ca6e1a259c61ea09131bdf9160c9
+INFO 01-08-20 06:14:49   Train accuracy: 71.66%
+INFO 01-08-20 06:14:50 > Stored test predictions to results/run-0/traditional-run-0/antiphon/subset/final-initial-test-pred.txt
+INFO 01-08-20 06:14:50   md5 checksum: 0e3a61ce8aa51dfb79ba36fe8cd0f625
+INFO 01-08-20 06:14:50   Test accuracy: 70.43%
+INFO 01-08-20 06:14:50 > Done.
+INFO 01-08-20 06:14:50 ************************************************************
+INFO 01-08-20 06:14:50 Training model...
+INFO 01-08-20 06:14:50 * feature_set=final-ambitus-initial
+INFO 01-08-20 06:14:50 * genre=antiphon
+INFO 01-08-20 06:14:50 * subset=subset
+INFO 01-08-20 06:14:50 * Training/test size: 2911/1248
+INFO 01-08-20 06:14:50 * Num. features: 4
+INFO 01-08-20 06:14:50 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 06:14:50   Tune using randomized search (n_iter=20, random_state=34)
+INFO 01-08-20 06:14:50   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 06:17:50   Best params: {'n_estimators': 450, 'max_samples': 0.5353535353535354, 'max_features': 0.6464646464646465, 'max_depth': 571, 'criterion': 'gini', 'bootstrap': True}
+INFO 01-08-20 06:17:50   Mean cross validation statistics for best params:
+INFO 01-08-20 06:17:50   - Train/test accuracy: 88.21%%/82.24%% (rank 1)
+INFO 01-08-20 06:17:50   - Train/test precision: 88.38%%/82.49%% (rank 1)
+INFO 01-08-20 06:17:50   - Train/test recall: 88.21%%/82.24%% (rank 1)
+INFO 01-08-20 06:17:50   - Train/test f1: 88.11%%/82.11%% (rank 1)
+INFO 01-08-20 06:17:50   Setting model parameters to highest-accuracy params
+INFO 01-08-20 06:17:50   Tuning done in 179.48s
+INFO 01-08-20 06:17:54 > Training done in 3.79s
+INFO 01-08-20 06:18:15 > Serialized model to results/run-0/traditional-run-0/antiphon/subset/final-ambitus-initial.model
+INFO 01-08-20 06:18:15   md5 checksum: 848e3aace13820c25d9e8770c02e02f9
+INFO 01-08-20 06:18:15 > Stored tuning results to results/run-0/traditional-run-0/antiphon/subset/final-ambitus-initial-tuning.csv
+INFO 01-08-20 06:18:15   md5 checksum: df972c41a0ee1f7898ad0f72d9964759
+INFO 01-08-20 06:18:16 > Stored train predictions to results/run-0/traditional-run-0/antiphon/subset/final-ambitus-initial-train-pred.txt
+INFO 01-08-20 06:18:16   md5 checksum: 10184597c822d070186ba29240cd0a8c
+INFO 01-08-20 06:18:16   Train accuracy: 87.87%
+INFO 01-08-20 06:18:17 > Stored test predictions to results/run-0/traditional-run-0/antiphon/subset/final-ambitus-initial-test-pred.txt
+INFO 01-08-20 06:18:17   md5 checksum: 0c3e36158d3941fc8502a670d6c6792c
+INFO 01-08-20 06:18:17   Test accuracy: 81.89%
+INFO 01-08-20 06:18:17 > Done.
+INFO 01-08-20 06:18:17 ************************************************************
+INFO 01-08-20 06:18:17 Training model...
+INFO 01-08-20 06:18:17 * feature_set=ambitus-initial
+INFO 01-08-20 06:18:17 * genre=antiphon
+INFO 01-08-20 06:18:17 * subset=subset
+INFO 01-08-20 06:18:17 * Training/test size: 2911/1248
+INFO 01-08-20 06:18:17 * Num. features: 3
+INFO 01-08-20 06:18:17 > Tuning classfier using stratified 5-fold CV and random search
+INFO 01-08-20 06:18:17   Tune using randomized search (n_iter=20, random_state=0)
+INFO 01-08-20 06:18:17   Tuned params: ['criterion', 'n_estimators', 'max_depth', 'max_features', 'bootstrap', 'max_samples']
+INFO 01-08-20 06:21:55   Best params: {'n_estimators': 669, 'max_samples': 0.5303030303030303, 'max_features': 0.7575757575757577, 'max_depth': 278, 'criterion': 'gini', 'bootstrap': True}
+INFO 01-08-20 06:21:55   Mean cross validation statistics for best params:
+INFO 01-08-20 06:21:55   - Train/test accuracy: 74.30%%/70.49%% (rank 1)
+INFO 01-08-20 06:21:55   - Train/test precision: 75.15%%/71.34%% (rank 1)
+INFO 01-08-20 06:21:55   - Train/test recall: 74.30%%/70.49%% (rank 1)
+INFO 01-08-20 06:21:55   - Train/test f1: 74.09%%/70.25%% (rank 1)
+INFO 01-08-20 06:21:55   Setting model parameters to highest-accuracy params
+INFO 01-08-20 06:21:55   Tuning done in 218.25s
+INFO 01-08-20 06:21:57 > Training done in 1.91s
+INFO 01-08-20 06:22:15 > Serialized model to results/run-0/traditional-run-0/antiphon/subset/ambitus-initial.model
+INFO 01-08-20 06:22:15   md5 checksum: 9b1c6fbc8e561df5d11abfb045524161
+INFO 01-08-20 06:22:15 > Stored tuning results to results/run-0/traditional-run-0/antiphon/subset/ambitus-initial-tuning.csv
+INFO 01-08-20 06:22:15   md5 checksum: 3fb7e280b86bd760d4167bf1ae9de89c
+INFO 01-08-20 06:22:15 > Stored train predictions to results/run-0/traditional-run-0/antiphon/subset/ambitus-initial-train-pred.txt
+INFO 01-08-20 06:22:15   md5 checksum: b256e5ccc86abf00906b2dd1cee78930
+INFO 01-08-20 06:22:15   Train accuracy: 74.03%
+INFO 01-08-20 06:22:16 > Stored test predictions to results/run-0/traditional-run-0/antiphon/subset/ambitus-initial-test-pred.txt
+INFO 01-08-20 06:22:16   md5 checksum: c314c8915cbc124001192a6d1544a9f8
+INFO 01-08-20 06:22:16   Test accuracy: 68.51%
+INFO 01-08-20 06:22:16 > Done.
+INFO 01-08-20 06:22:16 ************************************************************
+INFO 01-08-20 06:22:16 Evaluating experiment...
+INFO 01-08-20 06:22:29 > Stored scores to results/run-0/traditional-run-0/traditional-run-0-scores.csv

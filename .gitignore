@@ -1,21 +1,33 @@
+# General
 .vscode
 env
 __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 
-# Excluded full Cantus data: too large
+# Corpus and data
 cantuscorpus/
+data/run-1/
+data/run-2/
+data/run-3/
+data/run-4/
+demo-data/run-1/
+demo-data/run-2/
+demo-data/run-3/
+demo-data/run-4/
 
-results
+# Results
+results/**/antiphon
+results/**/responsory
+results/*/embeddings-tfidf-run-0/embeddings
+!results/run-0/embeddings-tfidf-run-0/figures/responsory
+
+# Figures
+*.afdesign
+kn28-1161_181.jpg
+
 notebooks
 
-*/run-1/
-*/run-2/
-*/run-3/
-*/run-4/
-
-figures
 # Others
 tmp/
 excluded/
