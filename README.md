@@ -3,11 +3,26 @@ Mode Classification and Natural Units in Plainchant
 
 ----
 
-<img src="figures/teaser/teaser.jpg?raw=true" width="700" 
+<img src="figures/teaser/teaser.jpg?raw=true" width="800" 
     title="Three approaches to mode classification in plainchant compared">
 
 **Main findings.**
-To do 
+Our study compares three approaches to classifying mode in medieval plainchant
+from the Cantus database. The eight modes are the central tonalities around 
+which the repertoire is organized. The *classical approach* classifies melodies
+to modes by looking at the final note and the range of the melody, and possibly
+other features. The *profile approach* looks at pitch (class) profiles, just like
+is often done when determining musical key in later Western music. Finally, the
+*distributional approach* represents melodies as frequency vectors counting, 
+with some weighing, how often certain melodic fragments (units) occur in the melody.
+We try all sorts of units, including three *natural units*: notes that form 
+so-called neumes, syllables or words. Overall, the distributional approach 
+works best, and of all units that can be used with it, natural units work best.
+In fact, they work surprisingly well even if we throw away the actual pitches 
+and use  only the intervals in a melody, or worse still, if we use only whether 
+the melody goes up or down (its contour). Could this mean that, just like a 
+sentence is made by stringing together words, a chant melody is made together
+by concatenating small musical motifs?
 
 ---
 
