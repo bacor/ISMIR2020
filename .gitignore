@@ -25,7 +25,6 @@ results/*/embeddings-tfidf-run-0/embeddings
 !results/run-0/*/responsory
 
 *.model
-*.afdesign
 kn28-1161_181.jpg
 
 # Others
