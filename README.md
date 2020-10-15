@@ -5,9 +5,9 @@ This repository contains the data and code for the paper 'Mode Classification
 and Natural Units in Plainchant' presented at [International Society
 for Music Information Retrieval conference 
 (ISMIR2020)](https://ismir.github.io/ISMIR2020/), for which we won the
-best multi/interdisciplinary research award!
+best multi/interdisciplinary research award! 🏆:trophy: 
 
-[Paper](documents/paper.pdf) &nbsp; • &nbsp; [Video](https://www.youtube.com/watch?v=1YmacSjitO0) &nbsp; • &nbsp; [Poster](documents/poster.pdf) &nbsp; • &nbsp; [Slides](documents/slides.pdf)
+[📖:book: &nbsp;Paper](documents/paper.pdf) &nbsp; • &nbsp; [🎬:clapper: &nbsp;Video](https://www.youtube.com/watch?v=1YmacSjitO0) &nbsp; • &nbsp; [📜:scroll: &nbsp;Poster](documents/poster.pdf)
 
 ----
 
