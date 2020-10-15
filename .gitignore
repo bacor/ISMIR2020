@@ -4,6 +4,7 @@ env
 __pycache__/
 .ipynb_checkpoints/
 .DS_Store
+.texpadtmp
 
 # Corpus and data
 cantuscorpus/
@@ -33,3 +34,5 @@ excluded/
 demo-results/
 excluded_notebooks/
 *.zip
+*.key
+.mscbackup
