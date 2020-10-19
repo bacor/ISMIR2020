@@ -7,7 +7,7 @@ for Music Information Retrieval conference
 (ISMIR2020)](https://ismir.github.io/ISMIR2020/), for which we won the
 best multi/interdisciplinary research award! 🏆 
 
-[📖 &nbsp;Paper](documents/paper.pdf) &nbsp; • &nbsp; [🎬 &nbsp;Video](https://www.youtube.com/watch?v=1YmacSjitO0) &nbsp; • &nbsp; [📜 &nbsp;Poster](documents/poster.pdf)
+[📖 &nbsp;Paper](documents/paper.pdf) ([supplements](documents/supplements.pdf)) &nbsp; • &nbsp; [🎬 &nbsp;Video](https://www.youtube.com/watch?v=1YmacSjitO0) &nbsp; • &nbsp; [📜 &nbsp;Poster](documents/poster.pdf)
 
 ----
 
